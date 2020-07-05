@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>MEEVENT</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2>Bonjour</h2>
+          <h1><b>Camille !</b></h1>
+        </ion-col>
+        <ion-col>
+          <ion-button color="tertiary" expand="block" shape="round" fill="outline" (click)="recharger()">Recharger</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
