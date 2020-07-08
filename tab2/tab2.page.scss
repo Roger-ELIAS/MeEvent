@@ -1,0 +1,150 @@
+/* ---------- FIXED TOP ---------- */
+
+
+#fixed_top {
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: 9%; 
+}
+
+
+#title1 {
+    font-family: 'Raleway';
+    font-size: 0.9em;
+
+    margin-bottom: 3px;
+}
+
+
+#title2 {
+    font-family: 'Raleway';
+    font-size: 1.5em;
+}
+
+
+/* ---------- EVENT CARD ---------- */
+
+// Div comprendant les infos sur chacun des évènements
+.event_card {
+    width: 88%;
+    height: 78px;
+
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: 15px;
+
+    box-shadow: 1px 1px 4px #888888;
+
+    border-radius: 23px;
+
+    display: flex;
+    align-items: center; 
+
+    overflow: hidden;
+}
+
+
+/* ---------- EVENT ICON ---------- */
+
+// Div comprenant l'icône de l'event en question ainsi que le nombre de personnes présentes
+.div_icon {
+    width: 78px;
+    height: 100%;
+
+    text-align: center;
+
+    background-color : #FFB82A;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    float: left;
+
+    border-radius: 23px;
+}
+
+
+// Retrait du margin des icônes
+ion-icon {
+    margin: 0;
+}
+
+
+// Icônes pour le type d'un évènement
+.type_icon {
+    font-size: 34px;
+
+    margin-bottom: 2px;
+
+    color: white;
+}
+
+
+// Icône de localisation à côté de l'adresse de l'évènement
+.location_icon {
+    font-size: 15px;
+
+    float: left;
+}
+
+
+// Rotation de l'icône pour faire stylé
+.rotate_icon {
+    transform: rotate(30deg);
+}
+
+
+// Text montrant le nombre de personnes situé sous l'icône
+.nb_person_text_icon {
+    color: white;
+    font-size: 13px;
+}
+
+
+// Retrait du margin sur les paragraphes psk c relou
+p {
+    margin: 0;
+}
+
+
+/* ---------- EVENT TEXT ---------- */
+
+.div_event_text {
+    height: 100%;
+    width: 100%;
+
+    float: left;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+.event_name_text {
+    font-family: 'Raleway';
+    font-size: 4.1vw;
+
+    margin-bottom: 2px;
+}
+
+
+.event_location_text {
+    font-family: 'Raleway';
+    font-size: 3.7vw;
+
+    margin-bottom: 5px;
+}
+
+
+.event_date_text {
+    font-family: 'Raleway';
+    font-size: 3.6vw;
+}
+
+
+
+
+

@@ -1,0 +1,30 @@
+ion-title{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.padding {
+  padding: 5%!important;
+}
+
+h1,h2{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ion-icon{
+  color: black;
+}
+
+ion-title{
+  color: black;
+}
+
+.recharger{
+  background: #3a7be0;
+  color: white;
+}

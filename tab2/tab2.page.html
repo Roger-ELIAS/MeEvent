@@ -1,0 +1,29 @@
+<ion-content>
+  <div id="fixed_top">
+    <p id="title1">DÉCOUVRIR DES</p>
+
+    <p id="title2"><B>Évènements</B></p>
+  </div>
+
+  <div id="events_list">
+    <div *ngFor="let event of events" class="event_card">
+      <div class="div_icon">
+        <ion-icon name="{{ event.iconName }}" class="{{ event.className }}"></ion-icon>
+  
+        <p class="nb_person_text_icon"> {{ event.nbPersonnes + "/" + event.nbPersonnesMax }}</p>
+      </div>
+  
+      <div class="div_event_text">
+        <p class="event_name_text"><B> {{ event.name }} </B></p>
+  
+        <div class="event_location_div">
+          <ion-icon name="location-sharp" class="location_icon"></ion-icon>
+          <p class="event_location_text"><i> {{ event. location }} </i></p>
+        </div>
+        
+        <p class="event_date_text"> {{ event.date }}   <i>{{ event.heure }}</i></p>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
