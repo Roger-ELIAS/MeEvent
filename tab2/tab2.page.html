@@ -1,14 +1,32 @@
 <ion-content>
-  <div id="fixed_top">
+  <div slot="fixed" id="fixed_top">
     <p id="title1">DÉCOUVRIR DES</p>
-
+  
     <p id="title2"><B>Évènements</B></p>
+  
+    <div id="searchbar_and_filtrate">
+      <ion-searchbar mode="ios" color="white" placeholder="Nom évènement"></ion-searchbar>
+      <!--<ion-button id="filtrate_button" shape="round">Filtrer</ion-button>-->
+      <button id="filtrate_button" type="button">Filtrer</button>
+    </div>
+
+    <ion-slides [options]="slideOptions">
+      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+        <div class="div_slide_icon_text">
+          <div class="div_slide_icon">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon {{slide}}"></ion-icon>
+          </div>
+  
+          <ion-label><small>{{slide}}</small></ion-label>
+        </div>
+      </ion-slide>
+    </ion-slides>
   </div>
 
   <div id="events_list">
     <div *ngFor="let event of events" class="event_card">
       <div class="div_icon">
-        <ion-icon name="{{ event.iconName }}" class="{{ event.className }}"></ion-icon>
+        <ion-icon src="../../assets/icons/{{ event.type }}.svg" class="type_icon"></ion-icon>
   
         <p class="nb_person_text_icon"> {{ event.nbPersonnes + "/" + event.nbPersonnesMax }}</p>
       </div>

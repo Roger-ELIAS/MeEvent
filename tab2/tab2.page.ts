@@ -7,6 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  
+  slideOptions = {
+    initialSlide: 0,
+    slidesPerView: 4,
+    autoplay: false
+  };
+
+  slides = [ 
+    "Artisanat", 
+    "Autre", 
+    "Cuisine", 
+    "Culture", 
+    "Danse", 
+    "Fête", 
+    "Film", 
+    "Formation",
+    "Jeux",
+    "Musique",
+    "Nature",
+    "Photo",
+    "Sport"
+  ];
 
   events = [
     {
@@ -18,8 +40,6 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Sport",
-      iconName: "barbell-sharp",
-      className: "type_icon rotate_icon"
     },
     {
       id: 1,
@@ -30,10 +50,67 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Musique",
-      iconName: "musical-notes-sharp",
-      className: "type_icon"
     },
-
+    {
+      idEvent: 0,
+      name: "Sortie jogging trop cool entre ...",
+      location: "Marseille, Bouches-du-Rhône",
+      date: "Lundi 29 Juin 2020",
+      heure: "14h-15h",
+      nbPersonnes: "15",
+      nbPersonnesMax: "18",
+      type: "Sport",
+    },
+    {
+      id: 1,
+      name: "AC/DC dans le garage",
+      location: "Marseille, Bouches-du-Rhône",
+      date: "Samedi 4 Juillet 2020",
+      heure: "14h-15h",
+      nbPersonnes: "15",
+      nbPersonnesMax: "18",
+      type: "Musique",
+    },
+    {
+      idEvent: 0,
+      name: "Sortie jogging trop cool entre ...",
+      location: "Marseille, Bouches-du-Rhône",
+      date: "Lundi 29 Juin 2020",
+      heure: "14h-15h",
+      nbPersonnes: "15",
+      nbPersonnesMax: "18",
+      type: "Sport",
+    },
+    {
+      id: 1,
+      name: "AC/DC dans le garage",
+      location: "Marseille, Bouches-du-Rhône",
+      date: "Samedi 4 Juillet 2020",
+      heure: "14h-15h",
+      nbPersonnes: "15",
+      nbPersonnesMax: "18",
+      type: "Musique",
+    },
+    {
+      idEvent: 0,
+      name: "Sortie jogging trop cool entre ...",
+      location: "Marseille, Bouches-du-Rhône",
+      date: "Lundi 29 Juin 2020",
+      heure: "14h-15h",
+      nbPersonnes: "15",
+      nbPersonnesMax: "18",
+      type: "Sport",
+    },
+    {
+      id: 1,
+      name: "AC/DC dans le garage",
+      location: "Marseille, Bouches-du-Rhône",
+      date: "Samedi 4 Juillet 2020",
+      heure: "14h-15h",
+      nbPersonnes: "15",
+      nbPersonnesMax: "18",
+      type: "Musique",
+    },
   ];
 
   constructor() {}
@@ -61,7 +138,7 @@ export class Tab2Page {
         break;
       }
 
-      case "Nature et Aventure": {
+      case "Nature": {
         iconToReturn.iconName = "leaf-sharp";
         iconToReturn.color = "#FFB82A";
 

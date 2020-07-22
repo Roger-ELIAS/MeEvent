@@ -1,82 +1,381 @@
 /* ---------- FIXED TOP ---------- */
 
-
+// Div en haut de la vue qui rassemble les éléments qui ne seront jamais scrollés
 #fixed_top {
-    margin-right: 6%;
-    margin-left: 6%;
-    margin-top: 9%; 
+
+    width: 100%;
+
+    padding-top: 23px;
+
+    padding-right: 5%;
+    padding-left: 5%;
+
+    background-color: white;
 }
 
 
-#title1 {
-    font-family: 'Raleway';
-    font-size: 0.9em;
-
-    margin-bottom: 3px;
-}
-
-
-#title2 {
-    font-family: 'Raleway';
-    font-size: 1.5em;
-}
-
-
-/* ---------- EVENT CARD ---------- */
-
-// Div comprendant les infos sur chacun des évènements
-.event_card {
-    width: 88%;
-    height: 78px;
-
-    margin-right: 6%;
-    margin-left: 6%;
-    margin-top: 15px;
-
-    box-shadow: 1px 1px 4px #888888;
-
-    border-radius: 23px;
+// Div rassemblant la barre de recherche et le bouton permettant d'accéder aux filtres
+#searchbar_and_filtrate {
+    margin-top: 3%;
 
     display: flex;
     align-items: center; 
+}
 
-    overflow: hidden;
+
+// Suppression d'un problème visuel de la barre de recherche
+ion-searchbar input {
+    border-style: none !important;
+}
+
+
+@media screen and (min-height: 500px) and (max-height: 600px) {
+    // Titre "Découvrir des"
+    #title1 {
+        font-family: 'Raleway';
+        font-size: 0.8em;
+
+        margin-bottom: 1%;
+    }
+
+
+    // Titre "Évènements"
+    #title2 {
+        font-family: 'Raleway';
+        font-size: 1.4em;
+
+        margin-bottom: 15px;
+    }
+
+
+    // Modification du style de la barre de recherche
+    ion-searchbar {
+        width: 70%;
+        height: 23px;
+        
+        margin-right: 5%;
+
+        box-shadow: 1px 1px 7px #c4c4c4;
+
+        border-radius: 25px;
+
+        float: left;
+
+        //--placeholder-font-style: 'Raleway';
+    }
+
+
+    // Modification du style du bouton "Filtrer"
+    #filtrate_button {
+        height: 22px;
+        width: 25%;
+
+        border-radius: 25px;
+
+        background-color: #87D7CA;
+        color: white;
+
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (min-height: 601px) and (max-height: 700px) {
+    // Titre "Découvrir des"
+    #title1 {
+        font-family: 'Raleway';
+        font-size: 0.9em;
+
+        margin-bottom: 1%;
+    }
+
+
+    // Titre "Évènements"
+    #title2 {
+        font-family: 'Raleway';
+        font-size: 1.5em;
+
+        margin-bottom: 15px;
+    }
+
+
+    // Modification du style de la barre de recherche
+    ion-searchbar {
+        width: 70%;
+        height: 26px;
+        
+        margin-right: 5%;
+
+        box-shadow: 1px 1px 7px #c4c4c4;
+
+        border-radius: 25px;
+
+        float: left;
+
+        //--placeholder-font-style: 'Raleway';
+    }
+
+
+    // Modification du style du bouton "Filtrer"
+    #filtrate_button {
+        height: 24px;
+        width: 25%;
+
+        border-radius: 25px;
+
+        background-color: #87D7CA;
+        color: white;
+
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-height: 701px) and (max-height: 800px) {
+    // Titre "Découvrir des"
+    #title1 {
+        font-family: 'Raleway';
+        font-size: 1em;
+
+        margin-bottom: 1%;
+    }
+
+
+    // Titre "Évènements"
+    #title2 {
+        font-family: 'Raleway';
+        font-size: 1.6em;
+
+        margin-bottom: 15px;
+    }
+
+
+    // Modification du style de la barre de recherche
+    ion-searchbar {
+        width: 70%;
+        height: 30px;
+        
+        margin-right: 5%;
+
+        box-shadow: 1px 1px 7px #c4c4c4;
+
+        border-radius: 25px;
+
+        float: left;
+
+        //--placeholder-font-style: 'Raleway';
+    }
+
+
+    // Modification du style du bouton "Filtrer"
+    #filtrate_button {
+        height: 28px;
+        width: 25%;
+
+        border-radius: 25px;
+
+        background-color: #87D7CA;
+        color: white;
+
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (min-height: 801px) and (max-height: 900px) {
+    // Titre "Découvrir des"
+    #title1 {
+        font-family: 'Raleway';
+        font-size: 1.1em;
+
+        margin-bottom: 1%;
+    }
+
+
+    // Titre "Évènements"
+    #title2 {
+        font-family: 'Raleway';
+        font-size: 1.7em;
+
+        margin-bottom: 15px;
+    }
+
+
+    // Modification du style de la barre de recherche
+    ion-searchbar {
+        width: 70%;
+        height: 32px;
+        
+        margin-right: 5%;
+
+        box-shadow: 1px 1px 7px #c4c4c4;
+
+        border-radius: 25px;
+
+        float: left;
+
+        //--placeholder-font-style: 'Raleway';
+    }
+
+
+    // Modification du style du bouton "Filtrer"
+    #filtrate_button {
+        height: 30px;
+        width: 25%;
+
+        border-radius: 25px;
+
+        background-color: #87D7CA;
+        color: white;
+
+        font-size: 18px;
+    }
+}   
+
+
+/* ---------- EVENT CARDS ---------- */
+
+@media screen and (min-height: 500px) and (max-height: 600px) {
+    // Div comprenant tous les évènements résultants d'une recherche
+    #events_list {
+        width: 100%;
+
+        position: absolute;
+
+        top: 34%;
+
+        overflow: auto;    
+    }
+
+    
+    // Div comprendant les infos sur chacun des évènements
+    .event_card {
+        width: 90%;
+        height: 70px;
+    
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 15px;
+    
+        box-shadow: 1px 1px 7px #c4c4c4;
+    
+        border-radius: 23px;
+    
+        display: flex;
+        align-items: center; 
+    
+        overflow: hidden;
+    }    
+}
+
+
+@media screen and (min-height: 601px) and (max-height: 700px) {
+    // Div comprenant tous les évènements résultants d'une recherche
+    #events_list {
+        width: 100%;
+
+        position: absolute;
+
+        top: 30%;
+
+        overflow: auto;    
+    }
+    
+    
+    // Div comprendant les infos sur chacun des évènements
+    .event_card {
+        width: 90%;
+        height: 80px;
+    
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 15px;
+    
+        box-shadow: 1px 1px 7px #c4c4c4;
+    
+        border-radius: 23px;
+    
+        display: flex;
+        align-items: center; 
+    
+        overflow: hidden;
+    }
+}
+
+
+@media screen and (min-height: 701px) and (max-height: 800px) {
+    // Div comprenant tous les évènements résultants d'une recherche
+    #events_list {
+        width: 100%;
+
+        position: absolute;
+
+        top: 30%;
+
+        overflow: auto;    
+    }
+    
+    
+    // Div comprendant les infos sur chacun des évènements
+    .event_card {
+        width: 90%;
+        height: 86px;
+    
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 15px;
+    
+        box-shadow: 1px 1px 7px #c4c4c4;
+    
+        border-radius: 23px;
+    
+        display: flex;
+        align-items: center; 
+    
+        overflow: hidden;
+    }  
+}
+
+
+@media screen and (min-height: 801px) and (max-height: 900px) {
+    // Div comprenant tous les évènements résultants d'une recherche
+    #events_list {
+        width: 100%;
+
+        position: absolute;
+
+        top: 28%;
+
+        overflow: auto;    
+    }
+
+    
+    // Div comprendant les infos sur chacun des évènements
+    .event_card {
+        width: 90%;
+        height: 90px;
+    
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 15px;
+    
+        box-shadow: 1px 1px 7px #c4c4c4;
+    
+        border-radius: 23px;
+    
+        display: flex;
+        align-items: center; 
+    
+        overflow: hidden;
+    }  
 }
 
 
 /* ---------- EVENT ICON ---------- */
 
-// Div comprenant l'icône de l'event en question ainsi que le nombre de personnes présentes
-.div_icon {
-    width: 78px;
-    height: 100%;
-
-    text-align: center;
-
-    background-color : #FFB82A;
-
-    padding-top: 9px;
-    padding-bottom: 9px;
-
-    float: left;
-
-    border-radius: 23px;
-}
-
-
 // Retrait du margin des icônes
 ion-icon {
     margin: 0;
-}
-
-
-// Icônes pour le type d'un évènement
-.type_icon {
-    font-size: 34px;
-
-    margin-bottom: 2px;
-
-    color: white;
 }
 
 
@@ -88,16 +387,9 @@ ion-icon {
 }
 
 
-// Rotation de l'icône pour faire stylé
+// Rotation de l'icône pour faire stylééé
 .rotate_icon {
     transform: rotate(30deg);
-}
-
-
-// Text montrant le nombre de personnes situé sous l'icône
-.nb_person_text_icon {
-    color: white;
-    font-size: 13px;
 }
 
 
@@ -107,8 +399,329 @@ p {
 }
 
 
+@media screen and (min-height: 501px) and (max-height: 600px) {  
+    // Div contenant l'icône du type de l'évènement
+    .div_icon {
+        width: 78px;
+        height: 100%;
+    
+        text-align: center;
+    
+        background-color : #FFB82A;
+    
+        padding-top: 9px;
+        padding-bottom: 9px;
+    
+        float: left;
+    
+        border-radius: 23px;
+    }
+
+
+    // Icônes des évènements affichés en résultat d'une recherche (c'est pas les icônes du slider quoi)
+    .type_icon {
+        font-size: 2em;
+    
+        margin-bottom: 2px;
+    
+        color: white;
+    } 
+
+
+    // Slider horizontal utilisé afin de filtrer le type d'évènement ciblé
+    ion-slides {
+        margin-top: 3%;
+    }
+    
+
+    // Div contenant l'icône et le text associé à cette-dernière dans le slider
+    .div_slide_icon_text {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    // Div contenant une icône dans le slider
+    .div_slide_icon {
+        width: 38px;
+        height: 38px;
+    
+        position: relative;
+    
+        display: flex;
+        align-items: center; 
+    
+        background-color: #F4F4F4;
+        border-radius: 50px;
+
+        margin: 0 auto;
+    }
+    
+    
+    // Icône du slider
+    .slide_icon {
+        font-size: 1.4em;
+    
+        color:#B4B2B2;
+    
+        position: absolute;
+    
+        margin-left: auto;
+        margin-right: auto;
+
+        left: 0;
+        right: 0;
+    
+        text-align: center;
+    }
+
+
+    // Text montrant le nombre de personnes situé sous l'icône
+    .nb_person_text_icon {
+        color: white;
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (min-height: 601px) and (max-height: 700px) {
+    // Div contenant l'icône du type de l'évènement
+    .div_icon {
+        width: 82px;
+        height: 100%;
+    
+        text-align: center;
+    
+        background-color : #FFB82A;
+    
+        padding-top: 9px;
+        padding-bottom: 9px;
+    
+        float: left;
+    
+        border-radius: 23px;
+    }
+
+
+    // Icônes des évènements affichés en résultat d'une recherche (c'est pas les icônes du slider quoi)
+    .type_icon {
+        font-size: 2.2em;
+    
+        margin-bottom: 2px;
+    
+        color: white;
+    }
+
+
+    // Slider horizontal utilisé afin de filtrer le type d'évènement ciblé
+    ion-slides {
+        margin-top: 3%;
+    }
+    
+
+    // Div contenant l'icône et le text associé à cette-dernière dans le slider
+    .div_slide_icon {
+        width: 40px;
+        height: 40px;
+    
+        position: relative;
+    
+        display: flex;
+        align-items: center; 
+    
+        background-color: #F4F4F4;
+        border-radius: 50px;
+
+        margin: 0 auto;
+    }
+    
+    
+    // Icône du slider
+    .slide_icon {
+        font-size: 1.6em;
+    
+        color:#B4B2B2;
+    
+        position: absolute;
+    
+        margin-left: auto;
+        margin-right: auto;
+
+        left: 0;
+        right: 0;
+    
+        text-align: center;
+    }
+
+
+    // Text montrant le nombre de personnes situé sous l'icône
+    .nb_person_text_icon {
+        color: white;
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-height: 701px) and (max-height: 800px) {
+    // Div contenant l'icône du type de l'évènement
+    .div_icon {
+        width: 86px;
+        height: 100%;
+    
+        text-align: center;
+    
+        background-color : #FFB82A;
+    
+        padding-top: 9px;
+        padding-bottom: 9px;
+    
+        float: left;
+    
+        border-radius: 23px;
+    }
+
+
+    // Icônes des évènements affichés en résultat d'une recherche (c'est pas les icônes du slider quoi)
+    .type_icon {
+        font-size: 2.4em;
+    
+        margin-bottom: 2px;
+    
+        color: white;
+    }
+
+
+    // Slider horizontal utilisé afin de filtrer le type d'évènement ciblé
+    ion-slides {
+        margin-top: 3%;
+    }
+
+
+    // Div contenant l'icône et le text associé à cette-dernière dans le slider
+    .div_slide_icon {
+        width: 48px;
+        height: 48px;
+    
+        position: relative;
+    
+        display: flex;
+        align-items: center; 
+    
+        background-color: #F4F4F4;
+        border-radius: 50px;
+
+        margin: 0 auto;
+    }
+    
+    
+    // Icône du slider
+    .slide_icon {
+        font-size: 1.9em;
+    
+        color:#B4B2B2;
+    
+        position: absolute;
+    
+        margin-left: auto;
+        margin-right: auto;
+
+        left: 0;
+        right: 0;
+    
+        text-align: center;
+    }
+
+
+    // Text montrant le nombre de personnes situé sous l'icône
+    .nb_person_text_icon {
+        color: white;
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-height: 801px) and (max-height: 900px) {
+    // Div contenant l'icône du type de l'évènement
+    .div_icon {
+        width: 90px;
+        height: 100%;
+    
+        text-align: center;
+    
+        background-color : #FFB82A;
+    
+        padding-top: 9px;
+        padding-bottom: 9px;
+    
+        float: left;
+    
+        border-radius: 23px;
+    }
+
+
+    // Icônes des évènements affichés en résultat d'une recherche (c'est pas les icônes du slider quoi)
+    .type_icon {
+        font-size: 2.6em;
+    
+        margin-bottom: 2px;
+    
+        color: white;
+    }
+
+
+    // Slider horizontal utilisé afin de filtrer le type d'évènement ciblé
+    ion-slides {
+        margin-top: 3%;
+    }
+    
+
+    // Div contenant l'icône et le text associé à cette-dernière dans le slider
+    .div_slide_icon {
+        width: 54px;
+        height: 54px;
+    
+        position: relative;
+    
+        display: flex;
+        align-items: center; 
+    
+        background-color: #F4F4F4;
+        border-radius: 50px;
+
+        margin: 0 auto;
+    }
+    
+
+    // Icône du slider
+    .slide_icon {
+        font-size: 2em;
+    
+        color:#B4B2B2;
+    
+        position: absolute;
+    
+        margin-left: auto;
+        margin-right: auto;
+
+        left: 0;
+        right: 0;
+    
+        text-align: center;
+    }
+
+
+    // Text montrant le nombre de personnes situé sous l'icône
+    .nb_person_text_icon {
+        color: white;
+        font-size: 17px;
+    }
+}
+
+
 /* ---------- EVENT TEXT ---------- */
 
+// Div comprenant le texte détaillant un évènement
 .div_event_text {
     height: 100%;
     width: 100%;
@@ -123,14 +736,16 @@ p {
 }
 
 
+// Texte correspondant au nom d'un évènement
 .event_name_text {
     font-family: 'Raleway';
-    font-size: 4.1vw;
+    font-size: 3.9vw;
 
     margin-bottom: 2px;
 }
 
 
+// Texte correspondant à la localisation d'un évènement
 .event_location_text {
     font-family: 'Raleway';
     font-size: 3.7vw;
@@ -139,6 +754,7 @@ p {
 }
 
 
+// Texte correspondant à la date d'un évènement
 .event_date_text {
     font-family: 'Raleway';
     font-size: 3.6vw;
