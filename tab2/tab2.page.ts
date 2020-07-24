@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { EvenementModalPage } from '../evenement-modal/evenement-modal.page';
 
 
 @Component({
@@ -8,12 +10,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
   
+  constructor(public modalController: ModalController) {}
+
+  // Options du Slider permettant de choisi le typé d'évènement à rechercher
   slideOptions = {
     initialSlide: 0,
     slidesPerView: 4,
     autoplay: false
   };
 
+  // Tous les types d'évènements disponibles
   slides = [ 
     "Artisanat", 
     "Autre", 
@@ -30,9 +36,10 @@ export class Tab2Page {
     "Sport"
   ];
 
+  // Liste d'évènements à afficher (ils seront à l'avenir récupérés dans la BD)
   events = [
     {
-      idEvent: 0,
+      id: 0,
       name: "Sortie jogging trop cool entre ...",
       location: "Marseille, Bouches-du-Rhône",
       date: "Lundi 29 Juin 2020",
@@ -52,7 +59,7 @@ export class Tab2Page {
       type: "Musique",
     },
     {
-      idEvent: 0,
+      id: 0,
       name: "Sortie jogging trop cool entre ...",
       location: "Marseille, Bouches-du-Rhône",
       date: "Lundi 29 Juin 2020",
@@ -72,7 +79,7 @@ export class Tab2Page {
       type: "Musique",
     },
     {
-      idEvent: 0,
+      id: 0,
       name: "Sortie jogging trop cool entre ...",
       location: "Marseille, Bouches-du-Rhône",
       date: "Lundi 29 Juin 2020",
@@ -92,7 +99,7 @@ export class Tab2Page {
       type: "Musique",
     },
     {
-      idEvent: 0,
+      id: 0,
       name: "Sortie jogging trop cool entre ...",
       location: "Marseille, Bouches-du-Rhône",
       date: "Lundi 29 Juin 2020",
@@ -113,109 +120,41 @@ export class Tab2Page {
     },
   ];
 
-  constructor() {}
+  // Récupération d'un évènement par son id
+  private getEventDatasById(eventId) {
+    for (let i = 0; i < this.events.length; i++) 
+      if (this.events[i].id == eventId)
+        return this.events[i];
 
-  getIconDatas(eventType) {
-    let iconToReturn = {
-      iconName: "",
-      className: "type_icon",
-      color: ""
-    };
+    return null;
+  }
 
-    switch(eventType) {
-      case "Sport": {
-        iconToReturn.iconName = "barbell-sharp";
-        iconToReturn.className = "type_icon rotate_icon";
-        iconToReturn.color = "#FFB82A";
+  // Fonction utilisée afin d'afficher les informations d'un évènement
+  async openEventModal(eventId) {
+    let eventDatas = this.getEventDatasById(eventId);
 
-        break;
-      }
+    console.log(eventDatas);
 
-      case "Musique": {
-        iconToReturn.iconName = "musical-notes-sharp";
-        iconToReturn.color = "#FFB82A";
-        
-        break;
-      }
+    if (eventDatas != null) {
+      const modal = await this.modalController.create({
+        component: EvenementModalPage,
+        cssClass: 'my-custom-class',
+        componentProps: {
+          "name": eventDatas.name,
+          "location": eventDatas.location,
+          "date": eventDatas.date,
+          "heure": eventDatas.heure,
+          "nbPersonnes": eventDatas.nbPersonnes,
+          "nbPersonnesMax": eventDatas.nbPersonnesMax,
+          "type": eventDatas.type
+        }  
+      });
 
-      case "Nature": {
-        iconToReturn.iconName = "leaf-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Formation": {
-        iconToReturn.iconName = "school-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Photographie": {
-        iconToReturn.iconName = "camera-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Cuisine": {
-        iconToReturn.iconName = "pizza-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Culture": {
-        iconToReturn.iconName = "book-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Film": {
-        iconToReturn.iconName = "film-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Jeux": {
-        iconToReturn.iconName = "game-controller-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Danse": {
-        iconToReturn.iconName = "body-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Artisanat": {
-        iconToReturn.iconName = "hammer-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Fête": {
-        iconToReturn.iconName = "beer-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
-
-      case "Autre": {
-        iconToReturn.iconName = "add-circle-sharp";
-        iconToReturn.color = "#FFB82A";
-
-        break;
-      }
+      
+      return await modal.present();
     }
-
-    return iconToReturn;
+    else {
+      // Traiter le cas du null (qui ne devrait normalement pas arriver mdr)
+    }  
   }
 }

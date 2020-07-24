@@ -24,7 +24,7 @@
   </div>
 
   <div id="events_list">
-    <div *ngFor="let event of events" class="event_card">
+    <div *ngFor="let event of events;" class="event_card" (click)="openEventModal(event.id)">
       <div class="div_icon">
         <ion-icon src="../../assets/icons/{{ event.type }}.svg" class="type_icon"></ion-icon>
   

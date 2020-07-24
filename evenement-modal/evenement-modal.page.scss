@@ -1,0 +1,78 @@
+
+#cover_img {
+    width: 100%;
+    height: auto;
+    
+    position: relative;
+
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+
+    background-image: url("running.png");
+}
+
+
+#event_name_and_location_div {
+    width: 100%;
+
+    position: absolute;
+
+    top: 10px;
+
+    padding-left: 5%;
+}
+
+
+#event_name {
+    font-size: 5.65vw;
+
+    margin-bottom: 0;
+}
+
+
+#location_div {
+    display: flex;
+    align-items: center; 
+}
+
+
+#location_icon {
+    float: left;
+}
+
+
+#location_text {
+    font-size: 4.3vw;
+}
+
+
+#icon_type_div {
+    width: 52px;
+    height: 52px;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center; 
+
+    margin: 0 auto;
+
+    top: 43%;
+    left: 5%;
+
+    background-color: #FFB82A;
+
+    border-radius: 50px;
+
+    
+}
+
+
+.type_icon {
+    font-size: 2.1em;
+
+    color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+}
