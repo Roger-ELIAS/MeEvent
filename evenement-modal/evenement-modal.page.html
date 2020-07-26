@@ -1,17 +1,47 @@
 <ion-content>
-  <div id="cover_img">
-    <div id="event_name_and_location_div">
-      <p id="event_name"><B>Sortie jogging trop cool <br> entre amis</B></p>
+  <div class="cover_img_div">
+    <ion-img src="../assets/images/running.png" class="cover_img"></ion-img>
+
+    <div class="event_name_and_location_div">
+      <p class="event_name"><B>Sortie jogging trop cool <br> entre amis</B></p>
   
-      <div id="location_div">
-        <ion-icon name="location-sharp" id="location_icon"></ion-icon>
-        <p id="location_text"><i>Marseille, Bouches-du-Rhône</i></p>
+      <div class="location_div">
+        <ion-icon name="location-sharp" class="location_icon"></ion-icon>
+        <p class="location_text"><i>Marseille, Bouches-du-Rhône</i></p>
       </div>
     </div>
 
-    <div id="icon_type_div">
+    <div class="icon_type_div">
       <ion-icon src="../../assets/icons/{{ type }}.svg" class="type_icon {{ type }}"></ion-icon>
     </div>
+  </div>
+
+  <div class="div_event_text">
+    <p class="date_text"><B>Vendredi 29 septembre 2020</B></p>
+
+    <p class="places_restantes_text">Places restantes : 3 &nbsp; <i>14h-15h</i></p>
+
+    <p class="infos_event_text">
+      Les Jeux olympiques (JO), aussi appelés Jeux olympiques modernes, 
+      puisqu'ils prolongent la tradition des jeux olympiques de la Grèce antique, 
+      sont des événements sportifs internationaux….
+    </p>
+
+    <p class="createur_text"><B>Créateur de l'évènement</B></p>
+  </div>
+
+  <div class="event_creator_div">
+    <ion-avatar class="creator_avatar">
+      <img src="../assets/images/avatar_camille.png">
+    </ion-avatar>
+
+    <ion-label class="creator_name">Camille Mazel <br> <i>Première cuite</i></ion-label>
+
+    <ion-icon name="chatbubble-ellipses-outline" class="chat_icon"></ion-icon>
+  </div>
+
+  <div class="join_event_div">
+    <p class="join_event_text">Je rejoins l'évènement !</p>
   </div>
 
   <!--<img src="../assets/images/running.png" id="cover_img" />-->
