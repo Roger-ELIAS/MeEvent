@@ -1,4 +1,6 @@
 <ion-content>
+  <ion-icon name="close-circle-sharp" (click) ="dismiss()" class="close_modal"></ion-icon>
+
   <div class="cover_img_div">
     <ion-img src="../assets/images/running.png" class="cover_img"></ion-img>
 
@@ -7,7 +9,7 @@
   
       <div class="location_div">
         <ion-icon name="location-sharp" class="location_icon"></ion-icon>
-        <p class="location_text"><i>Marseille, Bouches-du-Rhône</i></p>
+        <p class="location_text"><i>{{ location }}</i></p>
       </div>
     </div>
 
@@ -17,15 +19,11 @@
   </div>
 
   <div class="div_event_text">
-    <p class="date_text"><B>Vendredi 29 septembre 2020</B></p>
+    <p class="date_text"><B>{{ date }}</B></p>
 
-    <p class="places_restantes_text">Places restantes : 3 &nbsp; <i>14h-15h</i></p>
+    <p class="places_restantes_text">Places restantes : {{ nbPersonnesMax - nbPersonnes }} &nbsp; <i>{{ heure }}</i></p>
 
-    <p class="infos_event_text">
-      Les Jeux olympiques (JO), aussi appelés Jeux olympiques modernes, 
-      puisqu'ils prolongent la tradition des jeux olympiques de la Grèce antique, 
-      sont des événements sportifs internationaux….
-    </p>
+    <p class="infos_event_text">{{ text }}</p>
 
     <p class="createur_text"><B>Créateur de l'évènement</B></p>
   </div>
@@ -43,6 +41,4 @@
   <div class="join_event_div">
     <p class="join_event_text">Je rejoins l'évènement !</p>
   </div>
-
-  <!--<img src="../assets/images/running.png" id="cover_img" />-->
 </ion-content>

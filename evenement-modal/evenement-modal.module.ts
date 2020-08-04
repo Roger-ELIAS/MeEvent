@@ -27,4 +27,5 @@ export class EvenementModalPageModule {
   @Input() nbPersonnes: string;
   @Input() nbPersonnesMax: string;
   @Input() type: string;
+  @Input() text: string;
 }

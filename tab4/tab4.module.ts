@@ -17,4 +17,5 @@ import { Tab4Page } from './tab4.page';
   ],
   declarations: [Tab4Page]
 })
-export class Tab4PageModule {}
+export class Tab4PageModule {
+}

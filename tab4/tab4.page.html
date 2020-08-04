@@ -1,3 +1,59 @@
 <ion-content>
-  <ion-img id="coverImg" src="{{ coverImgSrc }}"></ion-img>
+  <div class="cover_img_div">
+    <ion-img id="coverImg" src="{{ coverImgSrc }}"></ion-img>
+
+    <ion-avatar class="profile_avatar">
+      <img src="../assets/images/avatar_camille.png">
+    </ion-avatar>
+
+    <div class="edit_profile_div">
+      <ion-icon name="create-sharp" class="edit_profile_icon"></ion-icon>
+    </div>
+  </div>
+  
+  <div class="profile_content">
+    <p class="name"><B>Camille Mazel</B></p>
+    <p class="title"><i>Première cuite</i></p>
+
+    <div class="stats">
+      <div class="abonnements_div">
+        <p class="nb_indicator"><B>20</B></p>
+        <p class="text_indicator">Abonnements</p>
+      </div>
+      
+      <div class="abonnes_div">
+        <p class="nb_indicator"><B>15</B></p>
+        <p class="text_indicator">Abonnés</p>
+      </div>
+
+      <div class="participations_div">
+        <p class="nb_indicator"><B>30</B></p>
+        <p class="text_indicator">Participations</p>
+      </div>
+    </div>
+
+    <p class="profile_description">
+      Salut salut je sais carrément pas quoi mettre en description donc je vais juste laisser ça. 
+      Je fais pleins d'événements vraiment cool mais j'ai pas d'amis, c'est fort dommage !
+    </p>
+
+    <div class="collection_text_div">
+      <p class="badges_text"><B>Badges obtenus</B></p>
+      <p class="collection_text">Voir la collection</p>
+    </div>
+
+    <!--<ion-slides [options]="slideOptionsMedals">
+      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+        images des médailles
+      </ion-slide>
+    </ion-slides> -->
+
+    <ion-slides [options]="slideOptionsEvents">
+      <ion-slide *ngFor="let event of eventsCreated; let slideIndex = index;">
+        <div class="event_div" [ngStyle]="{'background-image': 'url(../../assets/images/themes/' + event.type + '.png)'}">
+          salut
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>

@@ -41,12 +41,15 @@ export class Tab2Page {
     {
       id: 0,
       name: "Sortie jogging trop cool entre ...",
-      location: "Marseille, Bouches-du-Rhône",
+      location: "Marseille",
       date: "Lundi 29 Juin 2020",
       heure: "14h-15h",
       nbPersonnes: "15",
-      nbPersonnesMax: "18",
+      nbPersonnesMax: "17",
       type: "Sport",
+      membres: [],
+      creator: "",
+      text: "Super évènement où on va courir et se dépenser un max, on va vraiment s'amuser comme des petits fous !!!!!"
     },
     {
       id: 1,
@@ -146,7 +149,8 @@ export class Tab2Page {
           "heure": eventDatas.heure,
           "nbPersonnes": eventDatas.nbPersonnes,
           "nbPersonnesMax": eventDatas.nbPersonnesMax,
-          "type": eventDatas.type
+          "type": eventDatas.type,
+          "text": eventDatas.text
         }  
       });
 

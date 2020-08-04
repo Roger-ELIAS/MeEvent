@@ -1,0 +1,171 @@
+.cover_img_div {
+    width: 100%;
+
+    position: relative;
+
+    margin-bottom: 16%;
+}
+
+
+.profile_avatar {
+    width: 27vw;
+    height: 27vw;
+
+    position: absolute;
+
+    top: 68%;
+    left: 37%;
+}
+
+
+.edit_profile_div {
+    width: 8vw;
+    height: 8vw;
+
+    position: absolute;
+
+    right: 5%;
+    top: 91%;
+
+    background-color: #FFB82A;
+
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center; 
+}
+
+
+.edit_profile_icon {
+    font-size: 5vw;
+
+    color: white;
+
+    margin: 0 auto;
+}
+
+
+.profile_content {
+    width: 100%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.name {
+    font-size: 5vw;
+
+    text-align: center;
+
+    margin-bottom: 1%;
+}
+
+
+.title {
+    font-size: 4vw;
+
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.stats {
+    width: 100%;
+    height: auto;
+
+    overflow: auto;
+
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+.abonnements_div {
+    float: left;
+
+    text-align: center;
+
+    margin-right: 11%;
+}
+
+
+.abonnes_div {
+    float: left;
+
+    text-align: center;
+}
+
+
+.participations_div {
+    float: right;
+
+    text-align: center;
+}
+
+
+.nb_indicator {
+    font-size: 5.6vw;
+
+    margin: 0;
+}
+
+
+.text_indicator {
+    font-size: 3.8vw;
+    margin: 0;
+}
+
+
+.profile_description {
+    text-align: center;
+
+    font-size: 3.8vw;
+
+    margin-bottom: 5%;
+}
+
+
+.collection_text_div {
+    width: 100%;
+    height: 6.4vw;
+
+    position: relative;
+}
+
+
+.badges_text {
+    font-size: 4.6vw;
+
+    margin: 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.collection_text  {
+    font-size: 3.7vw;
+
+    margin: 0;
+
+    color: #707070;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.event_div {
+    width: 45%;
+    height: 15%;
+}
+
+
