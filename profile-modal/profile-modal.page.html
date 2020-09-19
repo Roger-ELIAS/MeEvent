@@ -20,19 +20,19 @@
     <p class="name"><B>Camille Mazel</B></p>
     <p class="title"><i>Première cuite</i></p>
 
-    <div class="div_abos_participations">
-      <div class="abonnements_div" (click)="openModalAbonnements()">
+    <div class="stats">
+      <div class="abonnements_div">
         <p class="nb_indicator"><B>20</B></p>
         <p class="text_indicator">Abonnements</p>
       </div>
       
-      <div class="abonnes_div" (click)="openModalAbonnes()">
+      <div class="abonnes_div">
         <p class="nb_indicator"><B>15</B></p>
         <p class="text_indicator">Abonnés</p>
       </div>
 
-      <div class="participations_div" (click)="openModalParticipations()">
-        <p class="nb_indicator"><B>20</B></p>
+      <div class="participations_div">
+        <p class="nb_indicator"><B>30</B></p>
         <p class="text_indicator">Participations</p>
       </div>
     </div>
@@ -41,44 +41,6 @@
       Salut salut je sais carrément pas quoi mettre en description donc je vais juste laisser ça. 
       Je fais pleins d'événements vraiment cool mais j'ai pas d'amis, c'est fort dommage !
     </p>
-
-    <ion-slides [options]="slideOptionsStats" class="slides_stats">
-      <ion-slide >
-        <div class="div_stat">
-          <div>
-            <p class="text_stat"><B>ÉVÈNEMENTS CRÉÉS</B></p>
-            <p class="nb_stat"><B>8</B></p>
-          </div>
-        </div>
-      </ion-slide>
-
-      <ion-slide >
-        <div class="div_stat">
-          <div>
-            <p class="text_stat"><B>ÉVÈNEMENTS REJOINTS</B></p>
-            <p class="nb_stat"><B>12</B></p>
-          </div>
-        </div>
-      </ion-slide>
-
-      <ion-slide >
-        <div class="div_stat">
-          <div>
-            <p class="text_stat"><B>PERSONNES RENCONTRÉES</B></p>
-            <p class="nb_stat"><B>42</B></p>
-          </div>
-        </div>
-      </ion-slide>
-
-      <ion-slide >
-        <div class="div_stat">
-          <div>
-            <p class="text_stat"><B>MESSAGES ENVOYÉS</B></p>
-            <p class="nb_stat"><B>220</B></p>
-          </div>
-        </div>
-      </ion-slide>
-    </ion-slides>
 
     <div class="collection_text_div">
       <p class="badges_text"><B>Badges obtenus</B></p>
@@ -118,5 +80,10 @@
         </div>
       </ion-slide>
     </ion-slides>
+
+    <div class="stats_calendar_div">
+      <ion-button class="stats_button">Statistiques</ion-button>
+      <ion-button class="calendar_button">Calendrier</ion-button>
+    </div>
   </div>
 </ion-content>

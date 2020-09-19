@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'evenement-modal',
     loadChildren: () => import('./evenement-modal/evenement-modal.module').then( m => m.EvenementModalPageModule)
+  },
+  {
+    path: 'profile-modal',
+    loadChildren: () => import('./profile-modal/profile-modal.module').then( m => m.ProfileModalPageModule)
+  },
+  {
+    path: 'abonnements-modal',
+    loadChildren: () => import('./abonnements-modal/abonnements-modal.module').then( m => m.AbonnementsModalPageModule)
   }
 ];
 @NgModule({

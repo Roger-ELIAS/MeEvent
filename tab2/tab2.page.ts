@@ -19,6 +19,23 @@ export class Tab2Page {
     autoplay: false
   };
 
+  listBooleans = {
+    "Artisanat": false,
+    "Autre": false,
+    "Cuisine": false,
+    "Culture": false,
+    "Danse": false,
+    "Fête": false,
+    "Film": false,
+    "Formation": false,
+    "Jeux": false,
+    "Musique": false,
+    "Nature": false,
+    "Photo": false,
+    "Sport": false
+  }
+
+
   // Tous les types d'évènements disponibles
   slides = [ 
     "Artisanat", 
@@ -60,6 +77,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Musique",
+      text: "Prêt à faire péter les décibels ? Alors rejoins-nous dans cet incroyable évènement !"
     },
     {
       id: 0,
@@ -70,6 +88,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Sport",
+      text: "Super évènement où on va courir et se dépenser un max, on va vraiment s'amuser comme des petits fous !!!!!"
     },
     {
       id: 1,
@@ -80,6 +99,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Musique",
+      text: "Prêt à faire péter les décibels ? Alors rejoins-nous dans cet incroyable évènement !"
     },
     {
       id: 0,
@@ -90,6 +110,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Sport",
+      text: "Super évènement où on va courir et se dépenser un max, on va vraiment s'amuser comme des petits fous !!!!!"
     },
     {
       id: 1,
@@ -100,6 +121,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Musique",
+      text: "Prêt à faire péter les décibels ? Alors rejoins-nous dans cet incroyable évènement !"
     },
     {
       id: 0,
@@ -110,6 +132,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Sport",
+      text: "Super évènement où on va courir et se dépenser un max, on va vraiment s'amuser comme des petits fous !!!!!"
     },
     {
       id: 1,
@@ -120,6 +143,7 @@ export class Tab2Page {
       nbPersonnes: "15",
       nbPersonnesMax: "18",
       type: "Musique",
+      text: "Prêt à faire péter les décibels ? Alors rejoins-nous dans cet incroyable évènement !"
     },
   ];
 
@@ -141,7 +165,6 @@ export class Tab2Page {
     if (eventDatas != null) {
       const modal = await this.modalController.create({
         component: EvenementModalPage,
-        cssClass: 'my-custom-class',
         componentProps: {
           "name": eventDatas.name,
           "location": eventDatas.location,
@@ -160,5 +183,23 @@ export class Tab2Page {
     else {
       // Traiter le cas du null (qui ne devrait normalement pas arriver mdr)
     }  
+  }
+
+
+  clickIconFiltrate(slide) {
+    if (this.listBooleans[slide])
+      this.listBooleans[slide] = !this.listBooleans[slide];
+
+    else {
+      for(let type of Object.keys(this.listBooleans)) {
+        if (this.listBooleans[type]) {
+          this.listBooleans[type] = !this.listBooleans[type];
+
+          break;
+        }
+      }
+
+      this.listBooleans[slide] = !this.listBooleans[slide];
+    } 
   }
 }

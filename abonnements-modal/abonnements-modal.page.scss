@@ -8,31 +8,44 @@
     padding-right: 5%;
     padding-left: 5%;
 
+    margin-bottom: 2.5%;
+
     background-color: white;
 
     z-index: 10;
 }
 
 
-// Titre "Vos"
-.title1 {
-    font-size: 5vw;
+// Div header contenant la flèche permettant de fermer le modal et le nom du profil
+.div_arrow_title {
+    width: 100%;
 
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 3.8%;
 
-    color: black;
+    display: flex;
+    align-items: center;
 }
 
 
-// Titre "Discussions"
-.title2 {
-    font-size: 6vw;
+// Flèche fermant le modal
+.arrow_close_modal {
+    font-size: 6.8vw;
 
-    margin-bottom: 2%;
-    margin-top: 0;
+    float: left;
 
-    color: black;
+    margin-right: 4vw;
+
+    color: black,
+}
+
+
+// Titre qui est le nom du profil
+.title {
+    font-size: 5.3vw;
+
+    float: left;
+
+    color: black,
 }
 
 
@@ -44,10 +57,8 @@
 
 // Boutons pour swap sur abonnés / abonnements non-sélectionnés
 .abo_button {
-    width: 47%;
+    width: 47.5%;
     height: 3.5vh;
-
-    margin: 0;
 
     font-size: 4.5vw;
 
@@ -62,10 +73,8 @@
 
 // Boutons pour swap sur abonnés / abonnements sélectionné
 .abo_button_select {
-    width: 47%;
+    width: 47.5%;
     height: 3.5vh;
-
-    margin: 0;
 
     font-size: 4.5vw;
 
@@ -79,50 +88,52 @@
 
 
 .left_button {
-    margin-right: 6%;
+    margin-right: 5%
 }
 
 
 /* ----- SLIDES ----- */
 
+.ion-padding {
+    padding-top: 0;
+}
+
 // Slider contenant les onglets abonnements / abonnés
-.slides {
-    width: 100%;
+ion-slides {
     height: 100%;
 
     overflow-y: scroll;
-    
-    margin-top: 34%;
-    margin-bottom: 15%;
-
-    background: linear-gradient(white, #EBEBEB);
 }
 
 
-.slide {
-    width: 100%;
-    height: 100%;
-
-    padding-left: 4%;
-    padding-right: 4%;
-}
-
-
-// Fait en sorte que le contenu de la slide commence bien en haut de cette-dernière
+// Je c plus pk c la mais je me souviens que ça sert à un truc
 .swiper-slide {
     display: block;
 }
 
 
+// J'crois ça sert à rien mais on le laisse c cool
+.swiper-slide h2 {
+    margin-top: 2.8rem;
+}
+
+
+// Pareil que celui du dessus mais ça fait des lignes en plus du coup c cool
+.swiper-slide img {
+    max-height: 50%;
+    max-width: 80%;
+    margin: 60px 0 40px;
+    pointer-events: none;
+}
+
+
 // Ptite margin sur la searchbar
 .searchbar {
-    width: 97%;
+    width: 100%;
     height: 5vh;
 
     padding-left: 3%;
-    padding-right: 12%;
-
-    margin-left: 1.5%;
+    padding-right: 15%;
 
     border-radius: 25px;
 
@@ -132,15 +143,24 @@
 
     box-shadow: 1px 1px 7px #c4c4c4;
 
-    font-size: 4.5vw;
+    font-size: 4vw;
+    
+    color: black;
+
+    float: left;
 }
 
 
 // Div englobant la searchbar pour pouvoir positionner l'icon de recherche en absolute
 .div_searchbar {
+    width: 96%;
+
+    overflow: auto;
+
     position: relative;
 
-    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-bottom: 3%;
 }
 
 
@@ -152,6 +172,8 @@
 
     top: 18%;
     right: 4%;
+
+    color: black;
 }
 
 
@@ -165,7 +187,7 @@
     margin-bottom: 5%;
 
     display: flex;
-    //align-items: center;
+    align-items: center;
 
     padding-left: 2%;
     padding-right: 2%;
@@ -178,62 +200,25 @@
 
     margin-left: 4%;
 
-     text-align: left;
+    text-align: left;
 }
 
 
 // Nom du profil d'un abonnement / abonné
 .abo_name {
     font-size: 4.3vw;
-
-    margin-top: 0;
-    margin-bottom: 1%;
 }
 
 
 // Titre du profil d'un abonnement / abonné
 .abo_titre {
     font-size: 4.1vw;
-
-    margin-top: 0;
-    margin-bottom: 2%;
-}
-
-
-.conv_text {
-    font-size: 3.4vw;
-
-    margin-top: 0;
-}   
-
-
-.color_circle {
-    width: 18.7vw;
-    height: 18.7vw;
-
-    position: absolute;
-
-    left: 1%;
-    top: -5%;
-
-    border-radius: 50px;
-
-    background-color: mediumpurple;
-
-    box-shadow: 1px 1px 7px #c4c4c4;
-
-    z-index: 3;
 }
 
 
 // Avatar du profil d'un abonnement / abonné
 .profile_avatar {
-    width: 17vw;
-    height: 17vw;
-
     float: left;
-
-    z-index: 4;
 }
 
 
@@ -259,6 +244,10 @@
 
     --background: white;
     --color: black;
+
+    box-shadow: 1px 1px 7px #c4c4c4;
+
+    border-radius: 25px;
 }
 
 
@@ -273,41 +262,10 @@
     right: 0;
 
     font-size: 3.8vw;
-}
 
+    --background: #87D7CA;
 
-.time_conv {
-    position: absolute;
+    box-shadow: 1px 1px 7px #c4c4c4;
 
-    right: 0;
-    bottom: 0;
-
-    font-size: 2.8vw;
-}
-
-
-.div_nb_msg {
-    width: 5vw;
-    height: 5vw;
-
-    position: absolute;
-
-    top: 0;
-    right: 0;
-
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-
-    background-color: #FFE74E;
-    border-radius: 50px;
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-
-.nb_msg {
-    font-size: 2.8vw;
+    border-radius: 25px;
 }

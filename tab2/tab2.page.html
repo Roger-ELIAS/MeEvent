@@ -1,31 +1,42 @@
-<ion-content>
-  <div slot="fixed" id="fixed_top">
-    <p id="title1">DÉCOUVRIR DES</p>
-  
-    <p id="title2"><B>Évènements</B></p>
-  
-    <div id="searchbar_and_filtrate">
-      <ion-searchbar mode="ios" color="white" placeholder="Nom évènement"></ion-searchbar>
-      <!--<ion-button id="filtrate_button" shape="round">Filtrer</ion-button>-->
-      <button id="filtrate_button" type="button">Filtrer</button>
+<div slot="fixed" class="fixed_top">
+  <ion-icon name="settings-sharp" class="settings_icon"></ion-icon>
+  <ion-icon name="notifications-sharp" class="notification_icon"></ion-icon>
+
+  <p class="title1">DÉCOUVRIR DES</p>
+
+  <p class="title2"><B>Évènements</B></p>
+
+  <div class="searchbar_and_filtrate">
+    <div class="div_searchbar">
+      <input type="text" placeholder="Chercher un évènement" class="searchbar">
+      <ion-icon name="search-sharp" class="search_icon"></ion-icon>
     </div>
 
-    <ion-slides [options]="slideOptions">
-      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
-        <div class="div_slide_icon_text">
-          <div class="div_slide_icon">
-            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon {{slide}}"></ion-icon>
-          </div>
-  
-          <ion-label><small>{{slide}}</small></ion-label>
-        </div>
-      </ion-slide>
-    </ion-slides>
+    <button class="filtrate_button" type="button">Filtrer</button>
   </div>
 
-  <div id="events_list">
+  <ion-slides [options]="slideOptions">
+    <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+      <div class="div_slide_icon_text">
+        <div *ngIf="!listBooleans[slide]" class="div_slide_icon" (click)="clickIconFiltrate(slide)">
+          <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon"></ion-icon>
+        </div>
+
+        <div *ngIf="listBooleans[slide]" class="div_slide_icon {{slide}}" (click)="clickIconFiltrate(slide)">
+          <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon_activated"></ion-icon>
+        </div>
+
+        <ion-label *ngIf="!listBooleans[slide]" class="label_select_event_type">{{slide}}</ion-label>
+        <ion-label *ngIf="listBooleans[slide]" class="label_select_event_type"><B>{{slide}}</B></ion-label>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</div>
+
+<ion-content>
+  <div class="events_list">
     <div *ngFor="let event of events;" class="event_card" (click)="openEventModal(event.id)">
-      <div class="div_icon">
+      <div class="div_icon {{ event.type }}">
         <ion-icon src="../../assets/icons/{{ event.type }}.svg" class="type_icon"></ion-icon>
   
         <p class="nb_person_text_icon"> {{ event.nbPersonnes + "/" + event.nbPersonnesMax }}</p>

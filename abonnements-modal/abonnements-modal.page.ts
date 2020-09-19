@@ -1,46 +1,51 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+
 import { IonSlides } from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-abonnements-modal',
+  templateUrl: './abonnements-modal.page.html',
+  styleUrls: ['./abonnements-modal.page.scss'],
 })
-export class Tab3Page {
+export class AbonnementsModalPage implements OnInit {
 
-  isEvenements = true;
-  isNewMsg = true;
-
-  abos = null;
+  // Données récupérées par le biais d'un modal ouvert sur le profil
+  @Input() isAbonnes: boolean;
+  @Input() listArobases: any;
+  @Input() profileName: string;
 
   @ViewChild(IonSlides) slides: IonSlides;
 
-  constructor() {}
+  abos = null;
 
+  // Options du Slider permettant de switch entre Abonnées / Abonnements
+  slideOptionsAbos = {
+    initialSlide: 1,
+    slidesPerView: 1,
+    centeredSlides: true,
+    autoplay: false
+  };
+
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    this.abos = this.getUserDatas(null);
+    this.abos = this.getUserDatas(this.listArobases);
+
+    /*let initialSlide = 0;
+
+    if (!this.isAbonnes)
+      initialSlide = 1;
+
+    this.slideOptionsAbos = {
+      initialSlide: initialSlide,
+      slidesPerView: 1,
+      centeredSlides: true,
+      autoplay: false
+    };*/
+
+    //this.slides.lockSwipes(true);
   }
-
-
-  evenements_click() {
-    if (!this.isEvenements) {
-      this.slides.slidePrev();
-    } 
-  }
-
-
-  conversations_click() {
-    if (this.isEvenements) {
-      this.slides.slideNext();
-    }
-  }
-
-
-  slides_changed() {
-    this.isEvenements = !this.isEvenements;
-  }
-
 
   private getUserDatas(listArobases) {
     // faudra récup sur la BD mais bon on verra pour cette partie
@@ -51,76 +56,91 @@ export class Tab3Page {
         nom: "Vincent Mazel",
         titre: "Maître des Arcanes",
         image: "on verra pour l'image wesh",
-        isAbonne: true,
-        msgToDisplay: "est-ce que tu aimes les cochons d'inde ?"
+        isAbonne: true
       },
       {
         arobase: "vicimbert",
         nom: "Victor Imbert",
         titre: "Barman",
         image: "on verra pour l'image wesh",
-        isAbonne: false,
-        msgToDisplay: "des pommes, des pommes, des pom ..."
+        isAbonne: false
       },
       {
         arobase: "ursvamp",
         nom: "Valentin Formet",
         titre: "Coryphée",
         image: "on verra pour l'image wesh",
-        isAbonne: true,
-        msgToDisplay: "on va se faire une mouflette"
+        isAbonne: true
       },
       {
         arobase: "vynce_mazeltov",
         nom: "Vincent Mazel",
         titre: "Maître des Arcanes",
         image: "on verra pour l'image wesh",
-        isAbonne: true,
-        msgToDisplay: "on tient pas la perche sur le téleski"
+        isAbonne: true
       },
       {
         arobase: "vicimbert",
         nom: "Victor Imbert",
         titre: "Barman",
         image: "on verra pour l'image wesh",
-        isAbonne: false,
-        msgToDisplay: "attention l'assiette est très très chaude"
+        isAbonne: false
       },
       {
         arobase: "ursvamp",
         nom: "Valentin Formet",
         titre: "Coryphée",
         image: "on verra pour l'image wesh",
-        isAbonne: true,
-        msgToDisplay: "BAT TOI KEVIN"
+        isAbonne: true
       },
       {
         arobase: "vynce_mazeltov",
         nom: "Vincent Mazel",
         titre: "Maître des Arcanes",
         image: "on verra pour l'image wesh",
-        isAbonne: true,
-        msgToDisplay: "la théorie du big ban jimmy, le big bang"
+        isAbonne: true
       },
       {
         arobase: "vicimbert",
         nom: "Victor Imbert",
         titre: "Barman",
         image: "on verra pour l'image wesh",
-        isAbonne: false,
-        msgToDisplay: "mhhhhhhh tu viens danser ?"
+        isAbonne: false
       },
       {
         arobase: "ursvamp",
         nom: "Valentin Formet",
         titre: "Coryphée",
         image: "on verra pour l'image wesh",
-        isAbonne: true,
-        msgToDisplay: "mhhhhhhhhhhhhh tu viens t'coucher ?"
+        isAbonne: true
       }
     ]
 
     return abos;
   }
 
+  dismiss() {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
+  }
+
+
+  abonnes_click() {
+    if (!this.isAbonnes) {
+      this.slides.slideNext();
+    } 
+  }
+
+
+  abonnements_click() {
+    if (this.isAbonnes) {
+      this.slides.slidePrev();
+    }
+  }
+
+
+  slides_changed() {
+    this.isAbonnes = !this.isAbonnes;
+  }
 }

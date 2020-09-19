@@ -1,37 +1,69 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="close()">
-        <ion-icon name="person-add"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>MEEVENT</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="close()">
-        <ion-icon name="settings"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button (click)="close()">
-        <ion-icon name="notifications"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-icon name="person-add-sharp" class="add_friend_icon"></ion-icon>
 
-<ion-content [fullscreen]="true">
-  <div class="padding">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <h2>Bonjour</h2>
-          <h1><b>Camille !</b></h1>
-        </ion-col>
-        <ion-col>
-          <ion-button color="tertiary" expand="block" shape="round" fill="outline" (click)="recharger()">Recharger</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-icon name="settings-sharp" class="settings_icon"></ion-icon>
+  <ion-icon name="notifications-sharp" class="notification_icon"></ion-icon>
+
+  <ion-label class="app_title"><B>MEEVENT</B></ion-label>
+  
+  <div class="padding_accueil">
+    <div class="div_title_smiley">
+      <p class="bonjour_title" >BONJOUR <B>CAMILLE !</B></p>
+      <ion-icon name="happy-outline" class="smiley"></ion-icon>
+    </div>
+    
+    <div class="div_recharge">
+      <div class="div_icon_nb_recharges">
+        <ion-icon name="flash-sharp" class="icon_charges"></ion-icon>
+        <ion-label class="nb_charges"><B>0/1</B></ion-label>
+      </div>
+      
+      <div class="div_text_button_recharge">
+        <p class="text_recharge">Charge dans 23h58</p>
+        <button class="button_recharge" type="button">Recharger</button>
+      </div>
+      
+      <ion-icon name="help-circle-outline" class="help_recharge_icon"></ion-icon>
+    </div>
+
+    <div class="div_title_button_premium">
+      <p class="title_premium"><B>Passer PREMIUM</B></p>
+      <button class="button_premium" type="button">+ d'infos</button>
+    </div>
+
+    <p class="text_premium"> 
+      Rejoignez l'élite et profitez de nombreux avantages en passant PREMIUM en cliquant sur le bouton ci-dessus. 
+      Nous avons hâtes de vous voir rejoindre la famille Meevent :)
+    </p>
+
+    <p class="title_évènements_pop"><B>Évènemens populaires</B></p>
+
+    <ion-slides [options]="slideOptionsEvents" class="évènements_populaires_slides">
+      <ion-slide *ngFor="let event of eventsCreated; let slideIndex = index;">
+        <div class="event_div">
+          <ion-img class="event_img" src="../../assets/images/themes/{{ event.type }}.png"></ion-img>
+
+          <p class="event_title"><B>Sortie jogging trop cool entre amis</B></p>
+          <p class="event_location"><i>Marseille, Bouches-du-Rhône</i></p>
+          <p class="event_date"><B>Lundi 29 juin 2020</B> &nbsp; <i>14h-15h</i></p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <p class="title_mes_prochains_évènements"><B>Mes prochains évènements</B></p>
+
+    <ion-slides [options]="slideOptionsEvents" class="mes_prochains_évènements_slider">
+      <ion-slide *ngFor="let event of eventsCreated; let slideIndex = index;">
+        <div class="event_div">
+          <ion-img class="event_img" src="../../assets/images/themes/{{ event.type }}.png"></ion-img>
+
+          <p class="event_title"><B>Sortie jogging trop cool entre amis</B></p>
+          <p class="event_location"><i>Marseille, Bouches-du-Rhône</i></p>
+          <p class="event_date"><B>Lundi 29 juin 2020</B> &nbsp; <i>14h-15h</i></p>
+        </div>
+      </ion-slide>
+    </ion-slides>
   </div>
 
+  <p><br></p>
 </ion-content>

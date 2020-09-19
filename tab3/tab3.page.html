@@ -1,17 +1,65 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div slot="fixed" class="fixed_top">
+    <p class="title1">Vos</p>
+    <p class="title2"><B>Discussions</B></p>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <button *ngIf="isEvenements" (click)="evenements_click()" class="abo_button_select left_button" type="button">Évènements</button>
+    <button *ngIf="!isEvenements" (click)="evenements_click()" class="abo_button left_button" type="button">Évènements</button>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <button *ngIf="isEvenements" (click)="conversations_click()" class="abo_button" type="button">Conversations</button>
+    <button *ngIf="!isEvenements" (click)="conversations_click()" class="abo_button_select" type="button">Conversations</button>
+  </div>
+  
+  <ion-slides [options]="slideOptionsAbos" (ionSlideNextEnd)="slides_changed()" (ionSlidePrevEnd)="slides_changed()" class="slides">
+    <ion-slide>
+      <div class="slide">
+        <div class="div_searchbar">
+          <input type="text" placeholder="Chercher une conversation" class="searchbar">
+          <ion-icon name="search-sharp" class="search_icon"></ion-icon>
+        </div>
+        
+        <div *ngFor="let abo of abos;" class="div_abo">
+          <div class="color_circle"></div>
+          <img src="../assets/images/avatar_camille.png" class="profile_avatar">
+          
+          <div class="abo_text">
+            <p class="abo_name"><B>{{ abo.nom }}</B></p>
+            <p class="abo_titre"><i>{{ abo.titre }}</i></p>
+            <p class="conv_text"><i>{{ abo.msgToDisplay }}</i></p>
+          </div>
+
+          <p class="time_conv">12:54</p>
+
+          <div *ngIf="isNewMsg" class="div_nb_msg">
+            <p class="nb_msg"><B>10</B></p>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <div class="div_searchbar">
+          <input type="text" placeholder="Chercher une conversation" class="searchbar">
+          <ion-icon name="search-sharp" class="search_icon"></ion-icon>
+        </div>
+
+        <div *ngFor="let abo of abos;" class="div_abo">
+          <img src="../assets/images/avatar_camille.png" class="profile_avatar">
+          
+          <div class="abo_text">
+            <p class="abo_name"><B>{{ abo.nom }}</B></p>
+            <p class="abo_titre">{{ abo.titre }}</p>
+            <p class="conv_text"><i>{{ abo.msgToDisplay }}</i></p>
+          </div>
+
+          <p class="time_conv">12:54</p>
+
+          <div *ngIf="isNewMsg" class="div_nb_msg">
+            <p class="nb_msg"><B>...</B></p>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

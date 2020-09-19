@@ -4,9 +4,9 @@
 .add_friend_icon {
     position: absolute;
 
-    font-size: 7vw;
+    font-size: 4vh;
 
-    top: 5%;
+    top: 23px;
     left: 5%;
 
     z-index: 10;
@@ -19,9 +19,9 @@
 .settings_icon {
     position: absolute;
 
-    font-size: 7vw;
+    font-size: 4vh;
 
-    top: 5%;
+    top: 23px;
     right: 15%;
 
     z-index: 10;
@@ -34,9 +34,9 @@
 .notification_icon {
     position: absolute;
 
-    font-size: 7vw;
+    font-size: 4vh;
 
-    top: 5%;
+    top: 23px;
     right: 5%;
 
     z-index: 10;
@@ -129,7 +129,7 @@
 
 
 // Statistiques de l'utilisateur (abonnements / abonnées / participations)
-.div_abos_participations {
+.stats {
     width: 100%;
     height: auto;
 
@@ -191,45 +191,6 @@
     font-size: 3.8vw;
 
     margin-bottom: 5%;
-}
-
-
-.slides_stats {
-    width: 100%;
-
-    margin-bottom: 5%;
-}
-
-
-.div_stat {
-    width: 100%;
-    height: 19vw;
-
-    background-color: #e7e7e7;
-
-    border-radius: 15px;
-
-    box-shadow: 1px 1px 7px #c4c4c4;
-
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-
-.text_stat {
-    font-size: 3.6vw;
-
-    margin: 0;
-}
-
-
-.nb_stat {
-    font-size: 7.3vw;
-
-    margin: 0;
-
-    color: #FFB82A;
 }
 
 
@@ -341,5 +302,26 @@
 
 // Slider contenant les évènements rejoints
 .events_joined {
-    margin-bottom: 15%;
+    margin-bottom: 5%;
+}
+
+/* ---------- STATS AND CALENDAR ---------- */
+
+// Div contenant les boutons permettant d'accéder aux statistiques et au calendrier du profil
+.stats_calendar_div {
+    margin-bottom: 7%;
+}    
+
+
+// Bouton permettant d'accéder aux statistiques
+.stats_button {
+    --background: #87D7CA;
+
+    margin-right: 6%;
+}
+
+
+// Bouton permettant d'accéder au calendrier
+.calendar_button {
+    --background: orange;
 }

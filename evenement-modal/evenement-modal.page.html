@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="icon_type_div">
+    <div class="icon_type_div {{ type }}">
       <ion-icon src="../../assets/icons/{{ type }}.svg" class="type_icon {{ type }}"></ion-icon>
     </div>
   </div>
@@ -29,8 +29,8 @@
   </div>
 
   <div class="event_creator_div">
-    <ion-avatar class="creator_avatar">
-      <img src="../assets/images/avatar_camille.png">
+    <ion-avatar>
+      <img src="../assets/images/avatar_camille.png" class="creator_avatar">
     </ion-avatar>
 
     <ion-label class="creator_name">Camille Mazel <br> <i>Première cuite</i></ion-label>
@@ -38,7 +38,7 @@
     <ion-icon name="chatbubble-ellipses-outline" class="chat_icon"></ion-icon>
   </div>
 
-  <div class="join_event_div">
+  <div class="join_event_div {{ type }}">
     <p class="join_event_text">Je rejoins l'évènement !</p>
   </div>
 </ion-content>
