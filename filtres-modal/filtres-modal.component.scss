@@ -1,0 +1,345 @@
+@media screen and (min-height: 400px) and (max-height: 450px) {
+    .marg_bot {
+        margin-bottom: 1.5vh;
+    }
+}
+
+
+@media screen and (min-height: 451px) and (max-height: 500px) {
+    .marg_bot {
+        margin-bottom: 1.7vh;
+    }
+}
+
+
+@media screen and (min-height: 501px) and (max-height: 550px) {
+    .marg_bot {
+        margin-bottom: 1.9vh;
+    }
+}
+
+
+@media screen and (min-height: 551px) and (max-height: 600px) {
+    .marg_bot {
+        margin-bottom: 2.1vh;
+    }
+}
+
+
+@media screen and (min-height: 601px) and (max-height: 650px) {
+    .marg_bot {
+        margin-bottom: 2.3vh;
+    }
+}
+
+
+@media screen and (min-height: 651px) and (max-height: 700px) {
+    .marg_bot {
+        margin-bottom: 2.5vh;
+    }
+}
+
+
+@media screen and (min-height: 701px) and (max-height: 750px) {
+    .marg_bot {
+        margin-bottom: 2.7vh;
+    }
+}
+
+
+@media screen and (min-height: 751px) and (max-height: 800px) {
+    .marg_bot {
+        margin-bottom: 2.9vh;
+    }
+}
+
+
+@media screen and (min-height: 801px) and (max-height: 850px) {
+    .marg_bot {
+        margin-bottom: 3.1vh;
+    }
+}
+
+
+@media screen and (min-height: 851px) and (max-height: 900px) {
+    .marg_bot {
+        margin-bottom: 3.3vh;
+    }
+}
+
+
+.div_creation_event {
+    height: 100%;
+    width: 100%;
+
+    padding-right: 7%;
+    padding-left: 7%;
+    padding-top: 5%;
+
+    margin-top: 13%;
+
+    background: linear-gradient(white, #EBEBEB);
+}
+
+
+.create_event_text {
+    font-size: 5.8vw;
+
+    position: absolute;
+
+    top: 1.6%;
+    left: 5%;
+
+    color: black;
+}
+
+
+.annuler_event_text {
+    font-size: 4vw;
+
+    position: absolute;
+
+    top: 3.3%;
+    right: 5%;
+
+    color: black;
+}
+
+
+.input_event_data {
+    color: black;
+
+    border-bottom: solid;
+    border-bottom-width: 1px;
+
+    font-size : 4.2vw;
+}
+
+
+.text_size_indication {
+    font-size: 3.1vw;
+
+    color: rgb(78, 78, 78);
+
+    margin-right: 0;
+    margin-top: 2%;
+    margin-left: 1%;
+    //margin-bottom: 2.5vh;
+}
+
+
+// Div contenant l'icône et le text associé à cette-dernière dans le slider
+.div_slide_icon_text {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 5%; // supprime la border sous la div fixed top ???? (c chelou mais ça marche mdr)
+}
+
+
+// Div contenant une icône dans le slider
+.div_slide_icon {
+    width: 13vw;
+    height: 13vw;
+
+    display: flex;
+    align-items: center; 
+
+    background-color: #F4F4F4;
+    border-radius: 50px;
+
+    margin: 0 auto;
+}
+
+
+// Icône du slider
+.slide_icon {
+    font-size: 8vw;
+
+    color:#B4B2B2;
+
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+}
+
+
+// Icône du slider
+.slide_icon_activated {
+    font-size: 8vw;
+
+    color:white;
+
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+}
+
+
+.label_select_event_type {
+    font-size: 3.8vw;
+
+    color: black;
+}
+
+
+.Artisanat {
+    background-color: red;
+}
+
+
+.Autre {
+    background-color: brown;
+}
+
+
+.Cuisine {
+    background-color: green;
+}
+
+
+.Culture {
+    background-color: yellow;
+}
+
+
+.Danse {
+    background-color: purple;
+}
+
+
+.Fête {
+    background-color: pink;
+}
+
+
+.Film {
+    background-color: blue;
+}
+
+
+.Formation {
+    background-color: blueviolet;
+}
+
+
+.Jeux {
+    background-color: royalblue;
+}
+
+
+.Musique {
+    background-color: gold;
+}
+
+
+.Nature {
+    background-color: darkkhaki;
+}
+
+
+.Photo {
+    background-color: mediumpurple;
+}
+
+
+.Sport {
+    background-color: khaki;
+}
+
+
+.datepicker_date {
+    background: #87D7CA;
+
+    border-radius: 25px;
+
+    color: white;
+
+    //margin-bottom: 2.5vh;
+
+    font-size: 4.2vw;
+}
+
+
+.divs_nb_pers_and_age {
+    width: 100%;
+}
+
+
+.div_nb_pers_and_text {
+    width: 40vw;
+
+    float: left;
+
+    //margin-left: 10vw;
+}
+
+
+.nb_pers_label {
+    font-size: 4.2vw;
+
+    color: black;
+
+    margin: 0;
+    margin-bottom: 3vw;
+
+    text-align: center;
+}
+
+
+.div_nb_pers {
+    width: 18vw;
+    height: 18vw;
+
+    border-radius: 25px;
+
+    background-color: #F4F4F4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto !important;
+
+    box-shadow: 1px 1px 7px #c4c4c4;
+}
+
+.nb_pers_text {
+    font-size: 7vw;
+
+    color: black;
+
+    margin: 0;
+}
+
+
+.appliquer_button {
+    height: 9.4vw;
+    width: 72%;
+    
+    position: absolute;
+
+    bottom: 3.5%;
+    left: 13.5%;
+
+    font-size: 5.2vw;
+  
+    border-radius: 25px;
+  
+    background-color: #87D7CA;
+    color: white;
+}
+

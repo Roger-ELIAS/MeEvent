@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="div_creation_event">
+    <p class="create_event_text"><B>Filtres</B></p>
+
+    <p class="annuler_event_text" (click)="dismiss()">Annuler</p>
+
+    <div class="div_searchbar marg_bot">
+      <input type="text" placeholder="Nom de l'évènement" class="searchbar">
+    </div>
+
+    <div class="div_searchbar marg_bot">
+      <input type="text" placeholder="Ville de l'évènement" class="searchbar">
+    </div>
+    <!--<ion-input class="input_event_data marg_bot" placeholder="Nom de l'évènement"></ion-input>-->
+
+    <ion-slides [options]="slideOptions" class="type_slider marg_bot">
+      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+        <div class="div_slide_icon_text">
+          <div *ngIf="!listBooleans[slide]" class="div_slide_icon" (click)="clickIconFiltrate(slide)">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon"></ion-icon>
+          </div>
+  
+          <div *ngIf="listBooleans[slide]" class="div_slide_icon {{slide}}" (click)="clickIconFiltrate(slide)">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon_activated"></ion-icon>
+          </div>
+  
+          <ion-label *ngIf="!listBooleans[slide]" class="label_select_event_type">{{slide}}</ion-label>
+          <ion-label *ngIf="listBooleans[slide]" class="label_select_event_type"><B>{{slide}}</B></ion-label>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="div_intervalle_date">
+      <ion-datetime displayFormat="MM DD YY" placeholder="Date début" class="datepicker_date marg_bot left_datepicker"></ion-datetime>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Date fin" class="datepicker_date marg_bot"></ion-datetime>
+    </div>
+
+    <div class="div_intervalle_heure">
+      <ion-datetime displayFormat="h:mm a" placeholder="Heure début" class="datepicker_date marg_bot left_datepicker"></ion-datetime>
+      <ion-datetime displayFormat="h:mm a" placeholder="Heure fin" class="datepicker_date marg_bot"></ion-datetime>
+    </div>
+       
+    <div class="divs_nb_pers_and_age marg_bot">
+      <div class="div_nb_pers_and_text">
+        <p class="nb_pers_label">Nb personnes max</p>
+  
+        <div class="div_nb_pers">
+          <p class="nb_pers_text">1</p>
+        </div>
+      </div>
+
+      <div class="div_nb_pers_and_text">
+        <p class="nb_pers_label">Rayon de recherche</p>
+  
+        <div class="div_nb_pers">
+          <p class="nb_pers_text">7km</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="appliquer_button" type="button">Appliquer les filtres</button>
+  </div>  
+</ion-content>

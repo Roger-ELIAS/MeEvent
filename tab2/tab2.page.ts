@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { EvenementModalPage } from '../evenement-modal/evenement-modal.page';
+import { FiltrerModalPage } from '../filtrer-modal/filtrer-modal.page';
 
 
 @Component({
@@ -186,6 +187,20 @@ export class Tab2Page {
   }
 
 
+  /*async openModalFiltrer() {
+    const modal = await this.modalController.create({
+      component: AbonnementsModalPage,
+      componentProps: {
+        "listArobases": this.userProfile.abonnements,
+        "isAbonnes": true,
+        "profileName": this.userProfile.nom
+      }  
+    });
+ 
+    return await modal.present();
+  }*/ 
+
+
   clickIconFiltrate(slide) {
     if (this.listBooleans[slide])
       this.listBooleans[slide] = !this.listBooleans[slide];
@@ -201,5 +216,15 @@ export class Tab2Page {
 
       this.listBooleans[slide] = !this.listBooleans[slide];
     } 
+  }
+
+
+  // Fonction utilisée afin d'afficher le modal de filtres
+  async openModalFiltres() {
+    const modal = await this.modalController.create({
+      component: FiltrerModalPage
+      });
+ 
+      return await modal.present();
   }
 }

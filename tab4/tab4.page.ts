@@ -57,7 +57,7 @@ export class Tab4Page implements OnInit {
   // Options du Slider permettant de visualiser ses stats
   slideOptionsStats = {
     initialSlide: 0,
-    slidesPerView: 1.5,
+    slidesPerView: 1.6,
     autoplay: false,
     spaceBetween: 12
   };
@@ -69,7 +69,7 @@ export class Tab4Page implements OnInit {
 
   slideOptionsEvents = {
     initialSlide: 0,
-    slidesPerView: 1.5,
+    slidesPerView: 1.4,
     autoplay: false,
     spaceBetween: 12
   };

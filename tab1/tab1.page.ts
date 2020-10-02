@@ -9,7 +9,7 @@ export class Tab1Page {
 
   slideOptionsEvents = {
     initialSlide: 0,
-    slidesPerView: 1.5,
+    slidesPerView: 1.4,
     autoplay: false,
     spaceBetween: 12
   };

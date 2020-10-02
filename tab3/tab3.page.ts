@@ -12,6 +12,7 @@ export class Tab3Page {
   isNewMsg = true;
 
   abos = null;
+  convs = null;
 
   @ViewChild(IonSlides) slides: IonSlides;
 
@@ -20,6 +21,7 @@ export class Tab3Page {
 
   ngOnInit() {
     this.abos = this.getUserDatas(null);
+    this.convs = this.getConvs(null);
   }
 
 
@@ -121,6 +123,79 @@ export class Tab3Page {
     ]
 
     return abos;
+  }
+
+
+  private getConvs(listArobases) {
+    // faudra récup sur la BD mais bon on verra pour cette partie
+
+    let convs = [
+      {
+        nom: "Muscle entre couillasses",
+        type : "Sport",
+        msgToDisplay: {
+          personWhoSent: "Lucie",
+          isYou: false,
+          msg: "go faire une séance jambes"
+        }
+      },
+      {
+        nom: "Soirée freestyle rap",
+        type : "Musique",
+        msgToDisplay: {
+          personWhoSent: "Camille",
+          isYou: true,
+          msg: "nekfeu ilé tro bo"
+        }
+      },
+      {
+        nom: "Construction en bois flotté",
+        type : "Artisanat",
+        msgToDisplay: {
+          personWhoSent: "Robert",
+          isYou: false,
+          msg: "qui va sérieusement créer ..."
+        }
+      },
+      {
+        nom: "Corona party au tord boyaux",
+        type : "Fête",
+        msgToDisplay: {
+          personWhoSent: "Noé",
+          isYou: false,
+          msg: "p'tit kiwi ?"
+        }
+      },
+      {
+        nom: "essayer 2 comprendre Tenet",
+        type : "Film",
+        msgToDisplay: {
+          personWhoSent: "Camille",
+          isYou: true,
+          msg: "j'ai r compris"
+        }
+      },
+      {
+        nom: "go game tavern",
+        type : "Jeux",
+        msgToDisplay: {
+          personWhoSent: "Léo",
+          isYou: false,
+          msg: "on s'fait un p'tit monopoly ?"
+        }
+      },
+      {
+        nom: "aprèm délire bibliothèque",
+        type : "Culture",
+        msgToDisplay: {
+          personWhoSent: "Camille",
+          isYou: false,
+          msg: "ça va être une dinguerie ..."
+        }
+      }
+    ]
+
+    return convs;
   }
 
 }

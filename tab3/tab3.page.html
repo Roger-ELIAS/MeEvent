@@ -3,11 +3,11 @@
     <p class="title1">Vos</p>
     <p class="title2"><B>Discussions</B></p>
 
-    <button *ngIf="isEvenements" (click)="evenements_click()" class="abo_button_select left_button" type="button">Évènements</button>
+    <button *ngIf="isEvenements" (click)="evenements_click()" class="abo_button_select left_button" type="button"><B>Évènements</B></button>
     <button *ngIf="!isEvenements" (click)="evenements_click()" class="abo_button left_button" type="button">Évènements</button>
 
     <button *ngIf="isEvenements" (click)="conversations_click()" class="abo_button" type="button">Conversations</button>
-    <button *ngIf="!isEvenements" (click)="conversations_click()" class="abo_button_select" type="button">Conversations</button>
+    <button *ngIf="!isEvenements" (click)="conversations_click()" class="abo_button_select" type="button"><B>Conversations</B></button>
   </div>
   
   <ion-slides [options]="slideOptionsAbos" (ionSlideNextEnd)="slides_changed()" (ionSlidePrevEnd)="slides_changed()" class="slides">
@@ -18,20 +18,21 @@
           <ion-icon name="search-sharp" class="search_icon"></ion-icon>
         </div>
         
-        <div *ngFor="let abo of abos;" class="div_abo">
-          <div class="color_circle"></div>
+        <div *ngFor="let conv of convs;" class="div_abo">
+          <div class="color_circle {{ conv.type }}"></div>
           <img src="../assets/images/avatar_camille.png" class="profile_avatar">
           
           <div class="abo_text">
-            <p class="abo_name"><B>{{ abo.nom }}</B></p>
-            <p class="abo_titre"><i>{{ abo.titre }}</i></p>
-            <p class="conv_text"><i>{{ abo.msgToDisplay }}</i></p>
+            <p class="abo_name"><B>{{ conv.nom }}</B></p>
+            <p class="abo_titre"><i>{{ conv.type }}</i></p>
+            <p *ngIf="conv.msgToDisplay.isYou" class="conv_text"><i>Vous : {{ conv.msgToDisplay.msg }}</i></p>
+            <p *ngIf="!conv.msgToDisplay.isYou" class="conv_text"><i>{{ conv.msgToDisplay.personWhoSent }} : {{ conv.msgToDisplay.msg }}</i></p>
           </div>
 
           <p class="time_conv">12:54</p>
 
           <div *ngIf="isNewMsg" class="div_nb_msg">
-            <p class="nb_msg"><B>10</B></p>
+            <p class="nb_msg"><B>...</B></p>
           </div>
         </div>
       </div>
@@ -49,14 +50,14 @@
           
           <div class="abo_text">
             <p class="abo_name"><B>{{ abo.nom }}</B></p>
-            <p class="abo_titre">{{ abo.titre }}</p>
+            <p class="abo_titre"><i>{{ abo.titre }}</i></p>
             <p class="conv_text"><i>{{ abo.msgToDisplay }}</i></p>
           </div>
 
           <p class="time_conv">12:54</p>
 
           <div *ngIf="isNewMsg" class="div_nb_msg">
-            <p class="nb_msg"><B>...</B></p>
+            <p class="nb_msg"><B>10</B></p>
           </div>
         </div>
       </div>

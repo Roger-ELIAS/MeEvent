@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { EventCreationModalPage } from  '../event-creation-modal/event-creation-modal.page';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(public modalController: ModalController) {}
 
+
+  // Fonction utilisée afin d'afficher le modal de création d'évènement
+  async openModalCreationEvent() {
+    const modal = await this.modalController.create({
+      component: EventCreationModalPage
+      });
+ 
+      return await modal.present();
+  } 
 }

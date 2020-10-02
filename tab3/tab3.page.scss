@@ -1,3 +1,68 @@
+.Artisanat {
+    background-color: red;
+}
+
+
+.Autre {
+    background-color: brown;
+}
+
+
+.Cuisine {
+    background-color: green;
+}
+
+
+.Culture {
+    background-color: yellow;
+}
+
+
+.Danse {
+    background-color: purple;
+}
+
+
+.Fête {
+    background-color: pink;
+}
+
+
+.Film {
+    background-color: blue;
+}
+
+
+.Formation {
+    background-color: blueviolet;
+}
+
+
+.Jeux {
+    background-color: royalblue;
+}
+
+
+.Musique {
+    background-color: gold;
+}
+
+
+.Nature {
+    background-color: darkkhaki;
+}
+
+
+.Photo {
+    background-color: mediumpurple;
+}
+
+
+.Sport {
+    background-color: khaki;
+}
+
+
 /* ----- HEADER PART ----- */
 
 .fixed_top {
@@ -29,7 +94,7 @@
 .title2 {
     font-size: 6vw;
 
-    margin-bottom: 2%;
+    margin-bottom: 4%;
     margin-top: 0;
 
     color: black;
@@ -45,11 +110,11 @@
 // Boutons pour swap sur abonnés / abonnements non-sélectionnés
 .abo_button {
     width: 47%;
-    height: 3.5vh;
+    height: 3.9vh;
 
     margin: 0;
 
-    font-size: 4.5vw;
+    font-size: 4.3vw;
 
     color: black;
     background-color: white;
@@ -63,11 +128,11 @@
 // Boutons pour swap sur abonnés / abonnements sélectionné
 .abo_button_select {
     width: 47%;
-    height: 3.5vh;
+    height: 3.9vh;
 
     margin: 0;
 
-    font-size: 4.5vw;
+    font-size: 4.3vw;
 
     border-radius: 25px;
 
@@ -141,6 +206,7 @@
     position: relative;
 
     margin-bottom: 5%;
+    margin-top: 3%;
 }
 
 
@@ -208,17 +274,15 @@
 
 
 .color_circle {
-    width: 18.7vw;
-    height: 18.7vw;
+    width: 18.5vw;
+    height: 18.5vw;
 
     position: absolute;
 
-    left: 1%;
-    top: -5%;
+    left: 1.1%;
+    top: -4%;
 
     border-radius: 50px;
-
-    background-color: mediumpurple;
 
     box-shadow: 1px 1px 7px #c4c4c4;
 

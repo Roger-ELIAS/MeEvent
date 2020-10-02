@@ -1,0 +1,54 @@
+<ion-content>
+  <div class="div_creation_event">
+    <p class="create_event_text"><B>Filtres</B></p>
+
+    <p class="annuler_event_text" (click)="dismiss()">Annuler</p>
+
+    <ion-input class="input_event_data" placeholder="Titre de l'évènement"></ion-input>
+    <p class="text_size_indication marg_bot">Le titre doit être compris entre 5 et 30 caractères</p>
+
+    <ion-input class="input_event_data" placeholder="Ville de l'évènement"></ion-input>
+    <p class="text_size_indication marg_bot">Le titre doit être compris entre 5 et 30 caractères</p>
+
+    <ion-slides [options]="slideOptions" class="type_slider marg_bot">
+      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+        <div class="div_slide_icon_text">
+          <div *ngIf="!listBooleans[slide]" class="div_slide_icon" (click)="clickIconFiltrate(slide)">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon"></ion-icon>
+          </div>
+  
+          <div *ngIf="listBooleans[slide]" class="div_slide_icon {{slide}}" (click)="clickIconFiltrate(slide)">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon_activated"></ion-icon>
+          </div>
+  
+          <ion-label *ngIf="!listBooleans[slide]" class="label_select_event_type">{{slide}}</ion-label>
+          <ion-label *ngIf="listBooleans[slide]" class="label_select_event_type"><B>{{slide}}</B></ion-label>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-datetime displayFormat="MM DD YY" placeholder="Date de l'évènement" class="datepicker_date marg_bot"></ion-datetime>
+
+    <ion-datetime displayFormat="h:mm a" placeholder="Heure de l'évènement" class="datepicker_date marg_bot"></ion-datetime>  
+    
+    <div class="divs_nb_pers_and_age marg_bot">
+      <div class="div_nb_pers_and_text">
+        <p class="nb_pers_label">Nb personnes max</p>
+  
+        <div class="div_nb_pers">
+          <p class="nb_pers_text">1</p>
+        </div>
+      </div>
+
+      <div class="div_nb_pers_and_text">
+        <p class="nb_pers_label">Rayon de recherche</p>
+  
+        <div class="div_nb_pers">
+          <p class="nb_pers_text">7km</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="appliquer_button" type="button">Appliquer les filtres</button>
+  </div>  
+</ion-content>

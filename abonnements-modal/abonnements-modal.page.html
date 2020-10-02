@@ -5,9 +5,9 @@
   </div>
 
   <button *ngIf="isAbonnes" (click)="abonnements_click()" class="abo_button left_button" type="button">Abonnements</button>
-  <button *ngIf="!isAbonnes" (click)="abonnements_click()" class="abo_button_select left_button" type="button">Abonnements</button>
+  <button *ngIf="!isAbonnes" (click)="abonnements_click()" class="abo_button_select left_button" type="button"><B>Abonnements</B></button>
 
-  <button *ngIf="isAbonnes" (click)="abonnes_click()" class="abo_button_select" type="button">Abonnés</button>
+  <button *ngIf="isAbonnes" (click)="abonnes_click()" class="abo_button_select" type="button"><B>Abonnés</B></button>
   <button *ngIf="!isAbonnes" (click)="abonnes_click()" class="abo_button" type="button">Abonnés</button>
 </div>
 

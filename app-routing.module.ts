@@ -21,6 +21,14 @@ const routes: Routes = [
   {
     path: 'abonnements-modal',
     loadChildren: () => import('./abonnements-modal/abonnements-modal.module').then( m => m.AbonnementsModalPageModule)
+  },
+  {
+    path: 'event-creation-modal',
+    loadChildren: () => import('./event-creation-modal/event-creation-modal.module').then( m => m.EventCreationModalPageModule)
+  },
+  {
+    path: 'filtrer-modal',
+    loadChildren: () => import('./filtrer-modal/filtrer-modal.module').then( m => m.FiltrerModalPageModule)
   }
 ];
 @NgModule({
