@@ -1,0 +1,60 @@
+<div class="full_w_h">
+  <ion-icon name="arrow-back-outline" class="arrow_close_modal" (click)="dismiss()"></ion-icon>
+
+  <p class="title">MEEVENT</p>
+
+  <div class="div_creation_event">
+    <p class="create_event_text marg_bot">
+      <B>Créer mon évènement</B>
+    </p>
+
+    <ion-input class="input_event_data" placeholder="Nom de l'évènement"></ion-input>
+    <p class="text_size_indication marg_bot">Le titre doit être compris entre 5 et 30 caractères</p>
+
+    <ion-input class="input_event_data" placeholder="Description de l'évènement"></ion-input>
+    <p class="text_size_indication marg_bot">La description doit être comprise entre 20 et 50 caractères</p>
+
+    <ion-slides [options]="slideOptions" class="type_slider marg_bot">
+      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+        <div class="div_slide_icon_text">
+          <div *ngIf="!listBooleans[slide]" class="div_slide_icon" (click)="clickIconFiltrate(slide)">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon"></ion-icon>
+          </div>
+  
+          <div *ngIf="listBooleans[slide]" class="div_slide_icon {{slide}}" (click)="clickIconFiltrate(slide)">
+            <ion-icon src="../../assets/icons/{{slide}}.svg" class="slide_icon_activated"></ion-icon>
+          </div>
+  
+          <ion-label *ngIf="!listBooleans[slide]" class="label_select_event_type">{{slide}}</ion-label>
+          <ion-label *ngIf="listBooleans[slide]" class="label_select_event_type"><B>{{slide}}</B></ion-label>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="div_intervalle_date marg_bot">
+      <ion-datetime displayFormat="MM DD YY" placeholder="Date" class="datepicker_date left_datepicker"></ion-datetime>
+      <ion-datetime displayFormat="h:mm a" placeholder="Heure" class="datepicker_date"></ion-datetime>  
+    </div>
+
+    <div class="div_label_toggle_button">
+      <p class="label_limite_age">Limites d'âge</p>
+      <ion-toggle class="toggle_limite_age"></ion-toggle>
+    </div>
+    
+    <ion-range dual-knobs pin color="dark" min="18" max="99" class="range">
+      <ion-icon slot="start" size="small" name="brush"></ion-icon>
+      <ion-icon slot="end" name="brush"></ion-icon>
+    </ion-range>
+
+    <p class="label_nb_pers">Nombre de personnes</p>
+    
+    <ion-range pin color="dark" min="3" max="30" class="range">
+      <ion-icon slot="start" size="small" name="brush"></ion-icon>
+      <ion-icon slot="end" name="brush"></ion-icon>
+    </ion-range>
+  </div>
+
+  <div class="join_event_div">
+    <p class="join_event_text">Je crée l'évènement !</p>
+  </div>
+</div>

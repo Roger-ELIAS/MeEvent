@@ -1,0 +1,89 @@
+<ion-content>
+  <ion-icon name="person-add-sharp" class="add_friend_icon"></ion-icon>
+
+  <ion-icon name="settings-sharp" class="settings_icon"></ion-icon>
+  <ion-icon name="notifications-sharp" class="notification_icon"></ion-icon>
+
+  <div class="cover_img_div">
+    <ion-img src="{{ coverImgSrc }}"></ion-img>
+
+    <ion-avatar class="profile_avatar">
+      <img src="../assets/images/avatar_camille.png">
+    </ion-avatar>
+
+    <div class="edit_profile_div">
+      <ion-icon name="create-sharp" class="edit_profile_icon"></ion-icon>
+    </div>
+  </div>
+  
+  <div class="profile_content">
+    <p class="name"><B>Camille Mazel</B></p>
+    <p class="title"><i>Première cuite</i></p>
+
+    <div class="stats">
+      <div class="abonnements_div">
+        <p class="nb_indicator"><B>20</B></p>
+        <p class="text_indicator">Abonnements</p>
+      </div>
+      
+      <div class="abonnes_div">
+        <p class="nb_indicator"><B>15</B></p>
+        <p class="text_indicator">Abonnés</p>
+      </div>
+
+      <div class="participations_div">
+        <p class="nb_indicator"><B>30</B></p>
+        <p class="text_indicator">Participations</p>
+      </div>
+    </div>
+
+    <p class="profile_description">
+      Salut salut je sais carrément pas quoi mettre en description donc je vais juste laisser ça. 
+      Je fais pleins d'événements vraiment cool mais j'ai pas d'amis, c'est fort dommage !
+    </p>
+
+    <div class="collection_text_div">
+      <p class="badges_text"><B>Badges obtenus</B></p>
+      <p class="collection_text">Voir la collection</p>
+    </div>
+
+    <!--<ion-slides [options]="slideOptionsMedals">
+      <ion-slide *ngFor="let slide of slides; let slideIndex = index">
+        images des médailles
+      </ion-slide>
+    </ion-slides> -->
+
+    <p class="events_created_text"><B>Évènements créés</B></p>
+
+    <ion-slides [options]="slideOptionsEvents" class="events_created">
+      <ion-slide *ngFor="let event of eventsCreated; let slideIndex = index;">
+        <div class="event_div">
+          <ion-img class="event_img" src="../../assets/images/themes/{{ event.type }}.png"></ion-img>
+
+          <p class="event_title"><B>Sortie jogging trop cool entre amis</B></p>
+          <p class="event_location"><i>Marseille, Bouches-du-Rhône</i></p>
+          <p class="event_date"><B>Lundi 29 juin 2020</B> &nbsp; <i>14h-15h</i></p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <p class="events_created_text"><B>Évènements rejoints</B></p>
+
+    <ion-slides [options]="slideOptionsEvents" class="events_joined">
+      <ion-slide *ngFor="let event of eventsCreated; let slideIndex = index;">
+        <div class="event_div">
+          <ion-img class="event_img" src="../../assets/images/themes/{{ event.type }}.png"></ion-img>
+
+          <p class="event_title"><B>Sortie jogging trop cool entre amis</B></p>
+          <p class="event_location"><i>Marseille, Bouches-du-Rhône</i></p>
+          <p class="event_date"><B>Lundi 29 juin 2020</B> &nbsp; <i>14h-15h</i></p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="stats_calendar_div">
+      <ion-button class="stats_button">Statistiques</ion-button>
+      <ion-button class="calendar_button">Calendrier</ion-button>
+    </div>
+  </div>
+</ion-content>

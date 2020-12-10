@@ -1,0 +1,440 @@
+ion-content {
+    position: relative;
+}
+
+
+.settings_icon {
+    position: absolute;
+
+    font-size: 7vw;
+
+    top: 5%;
+    right: 15%;
+
+    z-index: 10;
+
+    color: black;
+}
+
+
+.notification_icon {
+    position: absolute;
+
+    font-size: 7vw;
+
+    top: 5%;
+    right: 5%;
+
+    z-index: 10;
+
+    color: black;
+}
+
+/* ---------- FIXED TOP ---------- */
+
+// Div en haut de la vue qui rassemble les éléments qui ne seront jamais scrollés
+.fixed_top {
+    width: 100%;
+
+    padding-top: 7.5%;
+
+    padding-right: 5%;
+    padding-left: 5%;
+
+    background-color: white;
+}
+
+
+// Titre "Vos"
+.title1 {
+    font-size: 5vw;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: black;
+}
+
+
+// Titre "Discussions"
+.title2 {
+    font-size: 6vw;
+
+    margin-bottom: 5%;
+    margin-top: 0;
+
+    color: black;
+}
+
+
+// Div rassemblant la barre de recherche et le bouton permettant d'accéder aux filtres
+.searchbar_and_filtrate {
+    margin-top: 3%;
+
+    display: flex;
+    align-items: center; 
+}
+
+
+// Ptite margin sur la searchbar
+.searchbar {
+    width: 100%;
+    height: 5vh;
+
+    margin-bottom: 2%;
+    
+
+    padding-left: 3%;
+    padding-right: 15%;
+
+    border-radius: 25px;
+
+    background-color: #EDEDED;
+
+    border-style: none;
+
+    box-shadow: 1px 1px 7px #c4c4c4;
+
+    font-size: 4vw;
+    
+    color: black;
+
+    float: left;
+}
+
+
+// Div englobant la searchbar pour pouvoir positionner l'icon de recherche en absolute
+.div_searchbar {
+    width: 70%;
+    position: relative;
+
+    margin-right: 5%;
+}
+
+
+// Icon de recherche de la searchbar
+.search_icon {
+    position: absolute;
+
+    font-size: 3vh;
+
+    top: 18%;
+    right: 4%;
+
+    color: black;
+}
+
+
+.filtrate_button {
+    height: 6.2vw;
+    width: 25%;
+  
+    font-size: 4vw;
+  
+    border-radius: 25px;
+  
+    background-color: #87D7CA;
+    color: white;
+}  
+
+
+// Slider horizontal utilisé afin de filtrer le type d'évènement ciblé
+ion-slides {
+    margin-top: 3%;
+}
+
+
+.label_select_event_type {
+    font-size: 3.8vw;
+
+    color: black;
+}
+
+
+/* ---------- EVENT CARDS ---------- */
+
+// Div comprenant tous les évènements résultants d'une recherche
+.events_list {
+    width: 100%;
+
+    overflow: auto;    
+
+    background: linear-gradient(white, #EBEBEB);
+
+    margin-bottom: 13%;
+    padding-bottom: 7%;
+}  
+
+
+.event_card {
+    width: 90%;
+    height: 20vw; // 12vh
+
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 15px;
+
+    box-shadow: 1px 1px 7px #c4c4c4;
+    
+    background-color: white;
+
+    border-radius: 26px;
+
+    display: flex;
+    align-items: center; 
+
+    overflow: hidden;
+}
+
+
+/* ---------- EVENT ICON ---------- */
+
+// Retrait du margin des icônes
+ion-icon {
+    margin: 0;
+}
+
+
+// Div contenant l'icône et le text associé à cette-dernière dans le slider
+.div_slide_icon_text {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 5%; // supprime la border sous la div fixed top ???? (c chelou mais ça marche mdr)
+}
+
+
+// Icône de localisation à côté de l'adresse de l'évènement
+.location_icon {
+    font-size: 4vw;
+
+    float: left;
+}
+
+
+// Rotation de l'icône pour faire stylééé
+.rotate_icon {
+    transform: rotate(30deg);
+}
+
+
+// Retrait du margin sur les paragraphes psk c relou
+p {
+    margin: 0;
+}
+
+
+@media screen and (min-width: 270px) and (max-width: 320px) {
+    // Div contenant l'icône du type de l'évènement
+    .div_icon {
+        width: 22vw;
+        height: 100%;
+
+        text-align: center;
+
+        padding-top: 9px;
+        padding-bottom: 9px;
+
+        float: left;
+
+        border-radius: 26px;
+    }
+}
+
+
+@media screen and (min-width: 321px) {
+    // Div contenant l'icône du type de l'évènement
+    .div_icon {
+        width: 20vw;
+        height: 100%;
+
+        text-align: center;
+
+        padding-top: 9px;
+        padding-bottom: 9px;
+
+        float: left;
+
+        border-radius: 26px;
+    }
+}
+
+
+// Icônes des évènements affichés en résultat d'une recherche (c'est pas les icônes du slider quoi)
+.type_icon {
+    font-size: 9vw;
+
+    color: white;
+} 
+
+
+// Div contenant une icône dans le slider
+.div_slide_icon {
+    width: 13vw;
+    height: 13vw;
+
+    display: flex;
+    align-items: center; 
+
+    background-color: #F4F4F4;
+    border-radius: 50px;
+
+    margin: 0 auto;
+}
+
+
+.Artisanat {
+    background-color: red;
+}
+
+
+.Autre {
+    background-color: brown;
+}
+
+
+.Cuisine {
+    background-color: green;
+}
+
+
+.Culture {
+    background-color: yellow;
+}
+
+
+.Danse {
+    background-color: purple;
+}
+
+
+.Fête {
+    background-color: pink;
+}
+
+
+.Film {
+    background-color: blue;
+}
+
+
+.Formation {
+    background-color: blueviolet;
+}
+
+
+.Jeux {
+    background-color: royalblue;
+}
+
+
+.Musique {
+    background-color: gold;
+}
+
+
+.Nature {
+    background-color: darkkhaki;
+}
+
+
+.Photo {
+    background-color: mediumpurple;
+}
+
+
+.Sport {
+    background-color: khaki;
+}
+
+
+// Icône du slider
+.slide_icon {
+    font-size: 8vw;
+
+    color:#B4B2B2;
+
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+}
+
+
+// Icône du slider
+.slide_icon_activated {
+    font-size: 8vw;
+
+    color:white;
+
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+}
+
+
+// Text montrant le nombre de personnes situé sous l'icône
+.nb_person_text_icon {
+    color: white;
+
+    font-size: 3.7vw;
+}
+
+
+/* ---------- EVENT TEXT ---------- */
+
+// Div comprenant le texte détaillant un évènement
+.div_event_text {
+    height: 100%;
+    width: 100%;
+
+    float: left;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+// Texte correspondant au nom d'un évènement
+.event_name_text {
+    font-family: 'Raleway';
+    font-size: 3.9vw;
+
+    margin-bottom: 2px;
+}
+
+
+// Texte correspondant à la localisation d'un évènement
+.event_location_text {
+    font-family: 'Raleway';
+    font-size: 3.7vw;
+
+    margin-bottom: 5px;
+}
+
+
+// Texte correspondant à la date d'un évènement
+.event_date_text {
+    font-family: 'Raleway';
+    font-size: 3.6vw;
+}
+
+
+
+
+

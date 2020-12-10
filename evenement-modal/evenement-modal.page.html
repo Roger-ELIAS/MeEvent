@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-icon name="close-circle-sharp" (click) ="dismiss()" class="close_modal"></ion-icon>
+
+  <div class="cover_img_div">
+    <ion-img src="../assets/images/running.png" class="cover_img"></ion-img>
+
+    <div class="event_name_and_location_div">
+      <p class="event_name"><B>Sortie jogging trop cool <br> entre amis</B></p>
+  
+      <div class="location_div">
+        <ion-icon name="location-sharp" class="location_icon"></ion-icon>
+        <p class="location_text"><i>{{ location }}</i></p>
+      </div>
+    </div>
+
+    <div class="icon_type_div {{ type }}">
+      <ion-icon src="../../assets/icons/{{ type }}.svg" class="type_icon {{ type }}"></ion-icon>
+    </div>
+  </div>
+
+  <div class="div_event_text">
+    <p class="date_text"><B>{{ date }}</B></p>
+
+    <p class="places_restantes_text">Places restantes : {{ nbPersonnesMax - nbPersonnes }} &nbsp; <i>{{ heure }}</i></p>
+
+    <p class="infos_event_text marg_bot">{{ text }}</p>
+
+    <p class="createur_text"><B>Créateur de l'évènement</B></p>
+  </div>
+
+  <div class="event_creator_div">
+    <ion-avatar>
+      <img src="../assets/images/avatar_camille.png" class="creator_avatar">
+    </ion-avatar>
+
+    <ion-label class="creator_name">Camille Mazel <br> <i>Première cuite</i></ion-label>
+
+    <ion-icon name="chatbubble-ellipses-outline" class="chat_icon"></ion-icon>
+  </div>
+
+  <div class="join_event_div {{ type }}">
+    <p class="join_event_text">Je rejoins l'évènement !</p>
+  </div>
+</ion-content>

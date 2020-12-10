@@ -1,0 +1,57 @@
+<div slot="fixed" class="fixed_top">
+  <div class="div_arrow_title">
+    <ion-icon name="arrow-back-outline" class="arrow_close_modal" (click)="dismiss()"></ion-icon>
+    <ion-label class="title"><B>{{ profileName }}</B></ion-label>
+  </div>
+
+  <button *ngIf="isAbonnes" (click)="abonnements_click()" class="abo_button left_button" type="button">Abonnements</button>
+  <button *ngIf="!isAbonnes" (click)="abonnements_click()" class="abo_button_select left_button" type="button"><B>Abonnements</B></button>
+
+  <button *ngIf="isAbonnes" (click)="abonnes_click()" class="abo_button_select" type="button"><B>Abonnés</B></button>
+  <button *ngIf="!isAbonnes" (click)="abonnes_click()" class="abo_button" type="button">Abonnés</button>
+</div>
+
+<ion-content class="ion-padding">
+  <ion-slides [options]="slideOptionsAbos" (ionSlideNextEnd)="slides_changed()" (ionSlidePrevEnd)="slides_changed()">
+    <ion-slide>
+      <div class="slide">
+        <div class="div_searchbar">
+          <input type="text" placeholder="Rechercher des abonnés" class="searchbar">
+          <ion-icon name="search-sharp" class="search_icon"></ion-icon>
+        </div>
+
+        <div *ngFor="let abo of abos;" class="div_abo">
+          <img src="../assets/images/avatar_camille.png" class="profile_avatar">
+          
+          <div class="abo_text">
+            <ion-label class="abo_name">{{ abo.nom }} <br></ion-label>
+            <ion-label class="abo_titre"><i>{{ abo.titre }}</i></ion-label>
+          </div>
+
+          <ion-button class="follow_button_abo">Retirer</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <div class="div_searchbar">
+          <input type="text" placeholder="Rechercher des abonnés" class="searchbar">
+          <ion-icon name="search-sharp" class="search_icon"></ion-icon>
+        </div>
+
+        <div *ngFor="let abo of abos;" class="div_abo">
+          <img src="../assets/images/avatar_camille.png" class="profile_avatar">
+          
+          <div class="abo_text">
+            <ion-label class="abo_name">{{ abo.nom }} <br></ion-label>
+            <ion-label class="abo_titre"><i>{{ abo.titre }}</i></ion-label>
+          </div>
+
+          <ion-button *ngIf="abo.isAbonne" class="follow_button_abo">Retirer</ion-button>
+          <ion-button *ngIf="!abo.isAbonne" class="follow_button_not_abo">Suivre</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

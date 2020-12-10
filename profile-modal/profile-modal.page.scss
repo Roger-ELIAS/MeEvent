@@ -1,0 +1,327 @@
+/* ---------- ICONS AT THE TOP ---------- */
+
+// Icon ajout d'amis
+.add_friend_icon {
+    position: absolute;
+
+    font-size: 4vh;
+
+    top: 23px;
+    left: 5%;
+
+    z-index: 10;
+
+    color: white;
+}
+
+
+// Icon permettant d'accéder aux settings de l'application
+.settings_icon {
+    position: absolute;
+
+    font-size: 4vh;
+
+    top: 23px;
+    right: 15%;
+
+    z-index: 10;
+
+    color: white;
+}
+
+
+// Icon affichant les notifications que l'on a reçues
+.notification_icon {
+    position: absolute;
+
+    font-size: 4vh;
+
+    top: 23px;
+    right: 5%;
+
+    z-index: 10;
+
+    color: white;
+}
+
+
+/* ---------- PROFILE DATAS ---------- */
+
+// Image de couverture choisie par l'utilisateur
+.cover_img_div {
+    width: 100%;
+
+    position: relative;
+
+    margin-bottom: 16%;
+}
+
+
+// Image de profil de l'utilisateur
+.profile_avatar {
+    width: 27vw;
+    height: 27vw;
+
+    position: absolute;
+
+    top: 68%;
+    left: 37%;
+}
+
+
+// Div contenant le bouton permettant d'accéder à la modification de son profil
+.edit_profile_div {
+    width: 8vw;
+    height: 8vw;
+
+    position: absolute;
+
+    right: 5%;
+    top: 91%;
+
+    background-color: #FFB82A;
+
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center; 
+}
+
+
+// Bouton permettant d'accéder à la modification de son profil
+.edit_profile_icon {
+    font-size: 5vw;
+
+    color: white;
+
+    margin: 0 auto;
+}
+
+
+// Div contenant l'intégralité de la vue permettant de mettr en place des paddings sur les côtés
+.profile_content {
+    width: 100%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+// Nom du profil
+.name {
+    font-size: 5vw;
+
+    text-align: center;
+
+    margin-bottom: 1%;
+}
+
+
+// Titre choisi par l'utilisateur
+.title {
+    font-size: 4vw;
+
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+// Statistiques de l'utilisateur (abonnements / abonnées / participations)
+.stats {
+    width: 100%;
+    height: auto;
+
+    overflow: auto;
+
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+// Div contenant le nombre d'abonnements
+.abonnements_div {
+    float: left;
+
+    text-align: center;
+
+    margin-right: 11%;
+}
+
+
+// Div contenant le nombre d'abonnés
+.abonnes_div {
+    float: left;
+
+    text-align: center;
+}
+
+
+// Div contenant le nombre de participations
+.participations_div {
+    float: right;
+
+    text-align: center;
+}
+
+
+// Classe assignée aux nombre affichés pour chaque stat
+.nb_indicator {
+    font-size: 5.6vw;
+
+    margin: 0;
+}
+
+
+// Classe assignée aux texte de chaue stats (abonnements, abonnés et participations)
+.text_indicator {
+    font-size: 3.8vw;
+    margin: 0;
+}
+
+
+// Texte de description du profil
+.profile_description {
+    text-align: center;
+
+    font-size: 3.8vw;
+
+    margin-bottom: 5%;
+}
+
+
+/* ---------- BADGES COLLECTION ---------- */
+
+// Div contenant les titres "Badges obtenus" et "Voir la collection"
+.collection_text_div {
+    width: 100%;
+    height: 6.4vw;
+
+    position: relative;
+
+    margin-bottom: 5%;
+}
+
+
+// Classe associée au texte "Badges obtenus"
+.badges_text {
+    font-size: 4.6vw;
+
+    margin: 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+// Classe associée au texte "Voir la collection"
+.collection_text  {
+    font-size: 3.7vw;
+
+    margin: 0;
+
+    color: #707070;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* ---------- EVENTS JOINED / CREATED ---------- */
+
+// Div contenant un évèneemnt (rejoint ou créé)
+.event_div {
+    width: 100%;
+    height: 10%;
+
+    position: relative;
+}
+
+
+// Classe associée au texte "Évènements créés"
+.events_created_text {
+    font-size: 4.6vw;
+
+    margin-bottom: 3%;
+}
+
+
+// Titre d'un évènement
+.event_title {
+    font-size: 4vw;
+
+    position: absolute;
+
+    top: 5%;
+    left: 8%;
+    right: 8%;
+
+    color: white;
+}
+
+
+// Localisation d'un évènement
+.event_location {
+    font-size: 3.4vw;
+
+    position: absolute;
+
+    top: 40%;
+    left: 8%;
+    right: 8%;
+
+    color: white;
+}
+
+
+// Date d'un évènement
+.event_date {
+    font-size: 3.6vw;
+
+    position: absolute;
+
+    top: 58%;
+    left: 8%;
+    right: 8%;
+
+    color: white;
+}
+
+
+// Slider contenant les évènements créés 
+.events_created {
+    margin-bottom: 5%;
+}
+
+
+// Slider contenant les évènements rejoints
+.events_joined {
+    margin-bottom: 5%;
+}
+
+/* ---------- STATS AND CALENDAR ---------- */
+
+// Div contenant les boutons permettant d'accéder aux statistiques et au calendrier du profil
+.stats_calendar_div {
+    margin-bottom: 7%;
+}    
+
+
+// Bouton permettant d'accéder aux statistiques
+.stats_button {
+    --background: #87D7CA;
+
+    margin-right: 6%;
+}
+
+
+// Bouton permettant d'accéder au calendrier
+.calendar_button {
+    --background: orange;
+}
